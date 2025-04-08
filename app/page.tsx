@@ -18,14 +18,6 @@ export default function Home() {
               <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
                 Computer Science Student at the University of Guelph
               </p>
-              <div className="mt-10">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-                >
-                  Get in Touch
-                </a>
-              </div>
             </div>
           </div>
         </section>
