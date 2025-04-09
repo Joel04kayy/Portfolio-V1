@@ -52,27 +52,50 @@ body {
   position: relative;
   text-decoration: none;
   color: #1ca0f4;
-  transition: color 0.3s ease;
+  font-weight: 800;
+  cursor: pointer;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ffffff;
-  transition: width 0.3s ease;
+.nav-home {
+  position: relative;
+  text-decoration: none;
+  color: #1ca0f4;
+  cursor: pointer;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.nav-home:hover {
+  color: #ffffff;
 }
 
 .nav-link:hover {
   color: #ffffff;
 }
 
-.nav-link:hover::after {
+.nav-link:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.nav-link:hover:after {
   width: 100%;
-  animation: drawUnderline 0.3s ease forwards;
+  left: 0%;
 }
 
 .gradient {

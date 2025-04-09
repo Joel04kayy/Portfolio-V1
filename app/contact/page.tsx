@@ -38,7 +38,7 @@ export default function Contact() {
       
       <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 -mt-20">
         <div className="max-w-2xl w-full">
-          <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-8">
+          <div className="bg-[#1e2538]/80 backdrop-blur-sm rounded-lg p-8">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300">
@@ -49,8 +49,8 @@ export default function Contact() {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  required
                   className="mt-1 block w-full rounded-md bg-gray-700/50 border-gray-600 text-white p-2"
+                  required
                 />
               </div>
               <div>
@@ -62,8 +62,8 @@ export default function Contact() {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
                   className="mt-1 block w-full rounded-md bg-gray-700/50 border-gray-600 text-white p-2"
+                  required
                 />
               </div>
               <div>
@@ -72,23 +72,70 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="message"
-                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  required
+                  rows={4}
                   className="mt-1 block w-full rounded-md bg-gray-700/50 border-gray-600 text-white p-2"
+                  required
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Send Message
-              </button>
+              <div className="flex justify-center">
+                <button type="submit" className="button">
+                  <span className="button-content">Send Message</span>
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </section>
+
+      <style jsx>{`
+        .button {
+          position: relative;
+          overflow: hidden;
+          height: 3rem;
+          padding: 0 2rem;
+          border-radius: 1.5rem;
+          background: #304cfc;
+          background-size: 400%;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          font-family: var(--font-comfortaa);
+          font-weight: 500;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .button:hover::before {
+          transform: scaleX(1);
+        }
+
+        .button-content {
+          position: relative;
+          z-index: 1;
+        }
+
+        .button::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: scaleX(0);
+          transform-origin: 0 50%;
+          width: 100%;
+          height: inherit;
+          border-radius: inherit;
+          background: linear-gradient(
+            82.3deg,
+            rgba(17, 254, 255, 1) 10.8%,
+            rgba(45, 73, 255, 1) 94.3%
+          );
+          transition: all 0.475s;
+        }
+      `}</style>
     </main>
   )
 } 
