@@ -45,13 +45,6 @@ const Timeline = () => {
       description: "At the University of Guelph, I acted as a Website Training & Support Specialist Co-op, delivering expert training and technical support for Drupal, Content Hub, and SharePoint to enhance client proficiency and platform efficiency. I developed comprehensive documentation, release notes, and training materials, ensuring clarity and accessibility for users. Additionally, I performed accessibility audits, collaborated with developers to resolve issues, and efficiently managed client design and customization requests within Agile Scrum frameworks—streamlining workflows and improving system usability.",
       skills: "Drupal · SharePoint · Content Hub · Technical Documentation · Training & Development · Accessibility Testing · Technical Support · Agile Scrum · Content Management Systems (CMS) · Project Management · User Experience (UX)",
       side: "right"
-    },
-    {
-      company: "Tesla Inc.",
-      position: "Position · Employment Type",
-      period: "2020 – 2021",
-      description: "The success of every website depends on search engine optimization and digital marketing strategy. If you are on first page of all major search engines, then you are ahead among your competitors.",
-      side: "left"
     }
   ];
 
@@ -77,12 +70,13 @@ const Timeline = () => {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          width: 6px;
+          width: 10px;
           height: 100%;
           background: #1e2538;
           border: 1px solid #1e2538;
           animation: timeline-lineGrow 2s ease-out forwards;
           border-radius: 6px;
+          top: 0;
         }
         
         @keyframes timeline-lineGrow {
@@ -91,7 +85,7 @@ const Timeline = () => {
         }
         
         .timeline-container-item {
-          padding: 10px 50px;
+          padding: 10px 80px;
           position: relative;
           width: 50%;
           opacity: 0;
@@ -125,6 +119,7 @@ const Timeline = () => {
         .timeline-text-box h2 {
           font-weight: 600;
           color: #1ca0f4;
+          font-size: 1.35rem;
         }
         
         .timeline-text-box h4 {
@@ -178,25 +173,91 @@ const Timeline = () => {
         .timeline-container-item::after {
           content: '';
           position: absolute;
-          width: 30px;
-          height: 30px;
-          right: -15px;
+          width: 80px;
+          height: 80px;
+          right: -40px;
           background-color: #1e2538;
           border: 4px solid #1ca0f4;
-          top: 32px;
+          top: 12px;
           border-radius: 50%;
           z-index: 1;
           animation: timeline-pulse 4s infinite;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .timeline-circle-image {
+          position: absolute;
+          width: 72px;
+          height: 72px;
+          right: -36px;
+          top: 16px;
+          z-index: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #1e2538;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        .timeline-circle-image img {
+          max-width: 80%;
+          max-height: 80%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+        }
+
+        /* Specific adjustments for UOG logo */
+        .timeline-circle-image img[alt="University of Guelph Logo"] {
+          max-width: 110%;
+          max-height: 110%;
+          margin-top: -5px;
+        }
+
+        /* Specific adjustments for Evstry logo */
+        .timeline-circle-image img[alt="Evstry Logo"] {
+          max-width: 110%;
+          max-height: 110%;
+          margin-left: 5px;
+        }
+
+        /* Specific adjustments for MTC logo */
+        .timeline-circle-image img[alt="More Than Circumstance Logo"] {
+          max-width: 135%;
+          max-height: 135%;
+        }
+
+        /* Specific adjustments for Spice Mart logo */
+        .timeline-circle-image img[alt="Spice Mart Logo"] {
+          max-width: 100%;
+          max-height: 100%;
         }
         
         .timeline-right-container::after {
-          left: -15px;
+          left: -40px;
+        }
+        
+        .timeline-right-container .timeline-circle-image {
+          left: -36px;
+          right: auto;
         }
         
         @keyframes timeline-pulse {
-          0% { box-shadow: 0 0 0 0 rgba(28, 160, 244, 0.7); }
-          30% { box-shadow: 0 0 0 10px rgba(28, 160, 244, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(28, 160, 244, 0); }
+          0% { 
+            box-shadow: 0 0 0 0 rgba(28, 160, 244, 0.7);
+            border: 4px solid #1ca0f4;
+          }
+          30% { 
+            box-shadow: 0 0 0 20px rgba(28, 160, 244, 0);
+            border: 4px solid #1ca0f4;
+          }
+          100% { 
+            box-shadow: 0 0 0 0 rgba(28, 160, 244, 0);
+            border: 4px solid #1ca0f4;
+          }
         }
         
         /* Add sequential animation delays with infinite loop */
@@ -220,9 +281,77 @@ const Timeline = () => {
           animation-delay: 3s;
         }
         
+        .timeline-description-container {
+          position: relative;
+          overflow: hidden;
+          max-height: 100px;
+          transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-text-box:hover .timeline-description-container {
+          max-height: 500px;
+          transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-text-box:not(:hover) .timeline-description-container {
+          max-height: 100px;
+          transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-description-preview {
+          display: block;
+          margin-bottom: 10px;
+          transition: opacity 0.5s ease;
+        }
+
+        .timeline-description-full {
+          display: none;
+          opacity: 0;
+          transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-text-box:hover .timeline-description-preview {
+          display: none;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+
+        .timeline-text-box:hover .timeline-description-full {
+          display: block;
+          opacity: 1;
+          transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-text-box:not(:hover) .timeline-description-full {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+
+        .timeline-fade-gradient {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 30px;
+          background: linear-gradient(to bottom, transparent, #1e2538);
+          pointer-events: none;
+          transition: opacity 0.5s ease;
+        }
+
+        .timeline-text-box:hover .timeline-fade-gradient {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+
+        .timeline-text-box:not(:hover) .timeline-fade-gradient {
+          opacity: 1;
+          transition: opacity 0.5s ease;
+        }
+        
         @media screen and (max-width: 768px) {
           .timeline-line {
             left: 40px;
+            width: 10px;
           }
           
           .timeline-container-item {
@@ -256,7 +385,15 @@ const Timeline = () => {
               <h2>{item.company}</h2>
               <h4>{item.position}</h4>
               <small>{item.period}</small>
-              <p className="mt-4">{item.description}</p>
+              <div className="timeline-description-container">
+                <p className="timeline-description-preview">
+                  {item.description.split(' ').slice(0, 30).join(' ')}...
+                </p>
+                <p className="timeline-description-full">
+                  {item.description}
+                </p>
+                <div className="timeline-fade-gradient"></div>
+              </div>
               {item.skills && (
                 <div className="mt-4">
                   <p className="text-sm text-gray-400">Skills: {item.skills}</p>
@@ -264,6 +401,38 @@ const Timeline = () => {
               )}
               <span className={`timeline-${item.side}-arrow`}></span>
             </div>
+            {index === 0 && (
+              <div className="timeline-circle-image">
+                <img 
+                  src="/SMlogo.png" 
+                  alt="Spice Mart Logo" 
+                />
+              </div>
+            )}
+            {index === 1 && (
+              <div className="timeline-circle-image">
+                <img 
+                  src="/Elogo.png" 
+                  alt="Evstry Logo" 
+                />
+              </div>
+            )}
+            {index === 2 && (
+              <div className="timeline-circle-image">
+                <img 
+                  src="/MTClogo.png" 
+                  alt="More Than Circumstance Logo" 
+                />
+              </div>
+            )}
+            {index === 3 && (
+              <div className="timeline-circle-image">
+                <img 
+                  src="/UOGlogo.jpeg" 
+                  alt="University of Guelph Logo" 
+                />
+              </div>
+            )}
           </div>
         ))}
       </div>
