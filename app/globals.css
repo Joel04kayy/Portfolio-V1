@@ -51,6 +51,7 @@ body {
 .nav-link {
   position: relative;
   text-decoration: none;
+  color: #1ca0f4;
   transition: color 0.3s ease;
 }
 
@@ -61,12 +62,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--hover-color);
+  background-color: #ffffff;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--hover-color);
+  color: #ffffff;
 }
 
 .nav-link:hover::after {

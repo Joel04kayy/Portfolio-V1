@@ -12,7 +12,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link 
             href="/" 
-            className="nav-link text-2xl font-bold text-white"
+            className={`nav-link text-2xl font-bold ${
+              pathname === '/' ? 'invisible' : 'text-white'
+            }`}
           >
             Joel
           </Link>
