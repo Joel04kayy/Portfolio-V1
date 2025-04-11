@@ -173,26 +173,6 @@ export default function Projects() {
             rotateY(var(--rotate-y))
             translateZ(20px);
         }
-
-        .project-tile::before, .skill-tile::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            45deg,
-            transparent,
-            rgba(255, 255, 255, 0.1),
-            transparent
-          );
-          transform: translateZ(50px);
-          opacity: 0;
-          transition: opacity 0.3s ease;
-          border-radius: inherit;
-        }
-
-        .project-tile:hover::before, .skill-tile:hover::before {
-          opacity: 1;
-        }
       `}</style>
     </main>
   )
