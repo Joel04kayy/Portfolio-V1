@@ -1,8 +1,47 @@
+'use client';
+
 import GradientBackground from '../components/GradientBackground'
 import Navbar from '../components/Navbar'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 export default function About() {
+  useEffect(() => {
+    const cards = document.querySelectorAll('.about-card');
+    
+    const handleMouseMove = (e: MouseEvent, card: Element) => {
+      const rect = (card as HTMLElement).getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const relX = (x - centerX) / centerX;
+      const relY = (y - centerY) / centerY;
+      
+      (card as HTMLElement).style.setProperty('--rotate-x', `${relY * 15}deg`);
+      (card as HTMLElement).style.setProperty('--rotate-y', `${-relX * 15}deg`);
+    };
+    
+    const handleMouseLeave = (card: Element) => {
+      (card as HTMLElement).style.setProperty('--rotate-x', '0deg');
+      (card as HTMLElement).style.setProperty('--rotate-y', '0deg');
+    };
+    
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => handleMouseMove(e, card));
+      card.addEventListener('mouseleave', () => handleMouseLeave(card));
+    });
+    
+    return () => {
+      cards.forEach(card => {
+        card.removeEventListener('mousemove', (e) => handleMouseMove(e, card));
+        card.removeEventListener('mouseleave', () => handleMouseLeave(card));
+      });
+    };
+  }, []);
+
   return (
     <main className="min-h-screen text-white relative">
       <GradientBackground />
@@ -15,11 +54,11 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Profile Section */}
             <div className="lg:col-span-1">
-              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 h-[62.5%] sticky top-32">
+              <div className="profile-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 h-[62.5%] sticky top-32">
                 <div className="flex flex-col items-center justify-center h-full">
-                  <div className="w-48 h-48 relative mb-6 rounded-full overflow-hidden border-4 border-blue-500/30">
+                  <div className="w-48 h-48 relative mb-6 rounded-full overflow-hidden border-4 border-blue-500/30 transition-all duration-300 hover:border-blue-400 hover:shadow-[0_0_20px_rgba(28,160,244,0.5)]">
                     <Image
-                      src="/profile.jpg"
+                      src="/Profile.png"
                       alt="Profile Picture"
                       fill
                       className="object-cover"
@@ -52,7 +91,7 @@ export default function About() {
             {/* About Text Section */}
             <div className="lg:col-span-2 space-y-6">
               {/* Education Card */}
-              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
+              <div className="about-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -66,7 +105,7 @@ export default function About() {
               </div>
 
               {/* Technical Skills Card */}
-              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
+              <div className="about-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -79,7 +118,7 @@ export default function About() {
               </div>
 
               {/* Startup Business Card */}
-              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
+              <div className="about-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -92,7 +131,7 @@ export default function About() {
               </div>
 
               {/* Projects & Interests Card */}
-              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
+              <div className="about-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -105,7 +144,7 @@ export default function About() {
               </div>
 
               {/* Future Goals Card */}
-              <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
+              <div className="about-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -120,6 +159,38 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <style jsx>{`
+        .about-card {
+          transition: transform 0.3s ease;
+          position: relative;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .about-card:hover {
+          transform: scale(1.05);
+          z-index: 10;
+        }
+
+        .profile-card {
+          transition: transform 0.3s ease;
+          transform-style: preserve-3d;
+          perspective: 1000px;
+          position: relative;
+          --rotate-x: 0deg;
+          --rotate-y: 0deg;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-card:hover {
+          transform: perspective(1000px) 
+            rotateX(var(--rotate-x)) 
+            rotateY(var(--rotate-y))
+            translateZ(20px)
+            scale(1.05);
+          z-index: 10;
+        }
+      `}</style>
     </main>
   )
 } 
