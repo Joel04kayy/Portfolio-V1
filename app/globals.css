@@ -63,16 +63,15 @@ body {
 .nav-home {
   position: relative;
   text-decoration: none;
-  color: #1ca0f4;
   cursor: pointer;
   background: none;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
-  transition-property: color;
+  transition-property: filter;
 }
 
 .nav-home:hover {
-  color: #ffffff;
+  filter: brightness(0) invert(1);
 }
 
 .nav-link:hover {
