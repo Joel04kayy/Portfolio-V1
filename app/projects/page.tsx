@@ -1,12 +1,26 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AnimatedBackground from '../components/AnimatedBackground'
 import Navbar from '../components/Navbar'
+import { getRepositories, GitHubRepo } from '../services/github'
 
 export default function Projects() {
+  const [repos, setRepos] = useState<GitHubRepo[]>([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const tiles = document.querySelectorAll('.project-tile, .skill-tile');
+    const fetchRepos = async () => {
+      const repositories = await getRepositories('Joel04kayy');
+      setRepos(repositories);
+      setLoading(false);
+    };
+
+    fetchRepos();
+  }, []);
+
+  useEffect(() => {
+    const tiles = document.querySelectorAll('.project-tile');
     
     const handleMouseMove = (e: MouseEvent, tile: Element) => {
       const rect = (tile as HTMLElement).getBoundingClientRect();
@@ -39,7 +53,7 @@ export default function Projects() {
         tile.removeEventListener('mouseleave', () => handleMouseLeave(tile));
       });
     };
-  }, []);
+  }, [repos]);
 
   return (
     <main className="min-h-screen text-white relative">
@@ -49,28 +63,44 @@ export default function Projects() {
       <div className="pt-32 px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-4xl font-bold text-center mb-24">Projects</h2>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="rounded-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="project-tile bg-[#000f1d] rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-2">Project 1</h3>
-                <p className="text-gray-300 mb-4">Description of your project goes here.</p>
-                <div className="flex justify-center">
-                  <a href="#" className="button">
-                    <span className="button-content">View Project</span>
-                  </a>
-                </div>
+            {loading ? (
+              <div className="text-center text-gray-300">Loading projects...</div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {repos.map((repo) => (
+                  <div key={repo.name} className="project-tile bg-[#000f1d] rounded-lg p-6">
+                    <h3 className="text-xl font-semibold mb-2">{repo.name}</h3>
+                    <p className="text-gray-300 mb-4">{repo.description || 'No description available'}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {repo.topics.map((topic) => (
+                        <span key={topic} className="px-2 py-1 bg-blue-900/50 rounded-full text-sm">
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex justify-between items-center mb-4">
+                      {repo.language && (
+                        <span className="text-sm text-gray-400">
+                          {repo.language}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex justify-center">
+                      <a 
+                        href={repo.html_url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="button"
+                      >
+                        <span className="button-content">View on GitHub</span>
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="project-tile bg-[#000f1d] rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-2">Project 2</h3>
-                <p className="text-gray-300 mb-4">Description of your project goes here.</p>
-                <div className="flex justify-center">
-                  <a href="#" className="button">
-                    <span className="button-content">View Project</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
@@ -157,7 +187,7 @@ export default function Projects() {
           transition: all 0.475s;
         }
 
-        .project-tile, .skill-tile {
+        .project-tile {
           transition: transform 0.3s ease;
           transform-style: preserve-3d;
           perspective: 1000px;
@@ -167,7 +197,7 @@ export default function Projects() {
           border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .project-tile:hover, .skill-tile:hover {
+        .project-tile:hover {
           transform: perspective(1000px) 
             rotateX(var(--rotate-x)) 
             rotateY(var(--rotate-y))
@@ -175,5 +205,5 @@ export default function Projects() {
         }
       `}</style>
     </main>
-  )
+  );
 } 
