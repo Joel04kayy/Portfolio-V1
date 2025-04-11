@@ -27,12 +27,14 @@ export default function Footer() {
             >
               LinkedIn
             </Link>
-            <Link 
-              href="mailto:your.email@example.com" 
+            <a
               className="text-gray-400 hover:text-white transition-colors"
+              href="mailto:Joel04kayy@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Email
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import AnimatedBackground from '../components/AnimatedBackground'
 import Navbar from '../components/Navbar'
 import ProjectTile from '../components/ProjectTile'
+import SkillsScroll from '../components/SkillsScroll'
 import { getRepositories, GitHubRepo } from '../services/github'
 
 export default function Projects() {
@@ -80,38 +81,7 @@ export default function Projects() {
       </div>
 
       <div className="pt-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="text-4xl font-bold text-center mb-24">Skills</h2>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-[#1e2538]/80 backdrop-blur-sm rounded-lg p-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">JavaScript</p>
-              </div>
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">TypeScript</p>
-              </div>
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">React</p>
-              </div>
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">Next.js</p>
-              </div>
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">HTML</p>
-              </div>
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">CSS</p>
-              </div>
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">Tailwind CSS</p>
-              </div>
-              <div className="skill-tile rounded-lg p-4 text-center">
-                <p className="text-gray-300">Git</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <SkillsScroll />
       </div>
 
       <style jsx>{`
