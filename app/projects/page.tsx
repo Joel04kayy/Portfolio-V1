@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import AnimatedBackground from '../components/AnimatedBackground'
 import Navbar from '../components/Navbar'
+import ProjectTile from '../components/ProjectTile'
 import { getRepositories, GitHubRepo } from '../services/github'
 
 export default function Projects() {
@@ -70,34 +71,7 @@ export default function Projects() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {repos.map((repo) => (
-                  <div key={repo.name} className="project-tile bg-[#000f1d] rounded-lg p-6">
-                    <h3 className="text-xl font-semibold mb-2">{repo.name}</h3>
-                    <p className="text-gray-300 mb-4">{repo.description || 'No description available'}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {repo.topics.map((topic) => (
-                        <span key={topic} className="px-2 py-1 bg-blue-900/50 rounded-full text-sm">
-                          {topic}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex justify-between items-center mb-4">
-                      {repo.language && (
-                        <span className="text-sm text-gray-400">
-                          {repo.language}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex justify-center">
-                      <a 
-                        href={repo.html_url} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="button"
-                      >
-                        <span className="button-content">View on GitHub</span>
-                      </a>
-                    </div>
-                  </div>
+                  <ProjectTile key={repo.name} repo={repo} />
                 ))}
               </div>
             )}
