@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import GradientBackground from '../components/GradientBackground'
@@ -89,7 +90,7 @@ export default function About() {
                   <h3 className="text-xl font-semibold text-blue-400">Startup Business</h3>
                 </div>
                 <p className="text-gray-300">
-                  I run a successful startup business specializing in custom computer builds and technical solutions. From high-performance gaming rigs to professional workstations optimized for demanding software like SolidWorks, I create tailored systems that perfectly match my clients' needs. My business has not only provided valuable hands-on experience in hardware-software integration but has also helped me develop strong client relationships and project management skills.
+                  I run a successful startup business specializing in custom computer builds and technical solutions. From high-performance gaming rigs to professional workstations optimized for demanding software like SolidWorks, I create tailored systems that perfectly match my clients&apos; needs. My business has not only provided valuable hands-on experience in hardware-software integration but has also helped me develop strong client relationships and project management skills.
                 </p>
               </div>
 

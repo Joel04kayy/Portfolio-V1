@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 
 const Timeline = () => {
   // Animation effect for timeline items
@@ -403,33 +404,41 @@ const Timeline = () => {
             </div>
             {index === 0 && (
               <div className="timeline-circle-image">
-                <img 
+                <Image 
                   src="/SMlogo.png" 
-                  alt="Spice Mart Logo" 
+                  alt="Spice Mart Logo"
+                  width={100}
+                  height={100}
                 />
               </div>
             )}
             {index === 1 && (
               <div className="timeline-circle-image">
-                <img 
+                <Image 
                   src="/Elogo.png" 
-                  alt="Evstry Logo" 
+                  alt="Evstry Logo"
+                  width={100}
+                  height={100}
                 />
               </div>
             )}
             {index === 2 && (
               <div className="timeline-circle-image">
-                <img 
+                <Image 
                   src="/MTClogo.png" 
-                  alt="More Than Circumstance Logo" 
+                  alt="More Than Circumstance Logo"
+                  width={100}
+                  height={100}
                 />
               </div>
             )}
             {index === 3 && (
               <div className="timeline-circle-image">
-                <img 
+                <Image 
                   src="/UOGlogo.jpeg" 
-                  alt="University of Guelph Logo" 
+                  alt="University of Guelph Logo"
+                  width={100}
+                  height={100}
                 />
               </div>
             )}
