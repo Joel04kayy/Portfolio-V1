@@ -33,9 +33,9 @@ export async function getRepositories(username: string): Promise<GitHubRepo[]> {
         description: repo.description,
         html_url: repo.html_url,
         topics: repo.topics || [],
-        language: repo.language,
-        stargazers_count: repo.stargazers_count,
-        updated_at: repo.updated_at,
+        language: repo.language || null,
+        stargazers_count: repo.stargazers_count || 0,
+        updated_at: repo.updated_at || new Date().toISOString(),
       }));
   } catch (error) {
     console.error('Error fetching GitHub repositories:', error);
