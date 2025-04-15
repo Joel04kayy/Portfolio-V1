@@ -22,10 +22,10 @@ export default function Projects() {
   }, []);
 
   useEffect(() => {
-    const tiles = document.querySelectorAll('.project-tile');
+    const tiles = document.querySelectorAll<HTMLElement>('.project-tile');
     
-    const handleMouseMove = (e: MouseEvent, tile: Element) => {
-      const rect = (tile as HTMLElement).getBoundingClientRect();
+    const handleMouseMove = (e: MouseEvent, tile: HTMLElement) => {
+      const rect = tile.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       
@@ -35,23 +35,23 @@ export default function Projects() {
       const relX = (x - centerX) / centerX;
       const relY = (y - centerY) / centerY;
       
-      (tile as HTMLElement).style.setProperty('--rotate-x', `${relY * 15}deg`);
-      (tile as HTMLElement).style.setProperty('--rotate-y', `${-relX * 15}deg`);
+      tile.style.setProperty('--rotate-x', `${relY * 15}deg`);
+      tile.style.setProperty('--rotate-y', `${-relX * 15}deg`);
     };
     
-    const handleMouseLeave = (tile: Element) => {
-      (tile as HTMLElement).style.setProperty('--rotate-x', '0deg');
-      (tile as HTMLElement).style.setProperty('--rotate-y', '0deg');
+    const handleMouseLeave = (tile: HTMLElement) => {
+      tile.style.setProperty('--rotate-x', '0deg');
+      tile.style.setProperty('--rotate-y', '0deg');
     };
     
     tiles.forEach(tile => {
-      tile.addEventListener('mousemove', (e: MouseEvent) => handleMouseMove(e, tile));
+      tile.addEventListener('mousemove', (e) => handleMouseMove(e as MouseEvent, tile));
       tile.addEventListener('mouseleave', () => handleMouseLeave(tile));
     });
     
     return () => {
       tiles.forEach(tile => {
-        tile.removeEventListener('mousemove', (e: MouseEvent) => handleMouseMove(e, tile));
+        tile.removeEventListener('mousemove', (e) => handleMouseMove(e as MouseEvent, tile));
         tile.removeEventListener('mouseleave', () => handleMouseLeave(tile));
       });
     };
