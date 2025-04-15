@@ -10,7 +10,7 @@ const comfortaa = Comfortaa({
 
 export const metadata: Metadata = {
   title: "Joel Kayyalakam",
-  description: "Personal portfolio website showcasing my projects and skills as a Computer Science student",
+  description: "Welcome to my portfolio! Explore my journey through software development, projects, and professional experiences.",
   icons: {
     icon: { url: '/favicon.png', type: 'image/png' },
   },
