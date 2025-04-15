@@ -45,13 +45,13 @@ export default function Projects() {
     };
     
     tiles.forEach(tile => {
-      tile.addEventListener('mousemove', (e) => handleMouseMove(e, tile));
+      tile.addEventListener('mousemove', (e: MouseEvent) => handleMouseMove(e, tile));
       tile.addEventListener('mouseleave', () => handleMouseLeave(tile));
     });
     
     return () => {
       tiles.forEach(tile => {
-        tile.removeEventListener('mousemove', (e) => handleMouseMove(e, tile));
+        tile.removeEventListener('mousemove', (e: MouseEvent) => handleMouseMove(e, tile));
         tile.removeEventListener('mouseleave', () => handleMouseLeave(tile));
       });
     };
