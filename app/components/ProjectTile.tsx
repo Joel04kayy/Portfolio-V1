@@ -11,7 +11,7 @@ export default function ProjectTile({ repo }: ProjectTileProps) {
   const tileRef = useTileAnimation();
 
   return (
-    <div ref={tileRef} className="project-tile bg-[#232b42] rounded-lg p-6">
+    <div ref={tileRef} className="project-tile bg-[#232b42] rounded-lg p-6 flex flex-col h-full">
       <h3 className="text-xl font-semibold mb-2">{repo.name}</h3>
       <p className="text-gray-300 mb-4">{repo.description}</p>
       <div className="flex flex-wrap gap-2 mb-4">
@@ -21,19 +21,12 @@ export default function ProjectTile({ repo }: ProjectTileProps) {
           </span>
         ))}
       </div>
-      <div className="flex justify-between items-center mb-4">
-        {repo.language && (
-          <span className="text-sm text-gray-400">
-            {repo.language}
-          </span>
-        )}
-      </div>
-      <div className="flex justify-center">
+      <div className="mt-auto pt-4 relative z-10">
         <a 
           href={repo.html_url} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="button"
+          className="button w-full"
         >
           <span className="button-content">View on GitHub</span>
         </a>
@@ -57,6 +50,12 @@ export default function ProjectTile({ repo }: ProjectTileProps) {
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.3s ease;
+          transform: translateZ(0);
+        }
+
+        .button:hover {
+          transform: translateZ(0) translateY(-2px);
         }
 
         .button:hover::before {
