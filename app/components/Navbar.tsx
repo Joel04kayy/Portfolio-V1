@@ -14,7 +14,7 @@ export default function Navbar() {
           <Link 
             href="/" 
             className={`nav-home ${
-              pathname === '/' ? 'invisible' : 'text-gray-300'
+              pathname === '/' ? 'text-blue-400' : 'text-gray-300'
             }`}
           >
             <Image
