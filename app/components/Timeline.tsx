@@ -16,20 +16,12 @@ const Timeline = () => {
 
   const timelineData = [
     {
-      company: "Spice Mart",
-      position: "Full-stack Developer · Freelance",
-      period: "Jun 2023 - Aug 2023",
-      description: "As a Freelance Full-stack Developer for Spice Mart, I helped elevate Barrie's premier South Indian store by building a dynamic, full-stack website using Tailwind CSS, Next.js, MongoDB, and React. Collaborating with a peer, I integrated a RESTful API to optimize data management and implemented secure CRUD operations via Auth0 for enhanced security. The project empowered the client with easy self-updates for products, pricing, and weekly flyers—streamlining their digital operations. Through hands-on development, client meetings, and iterative research, I refined my project management, teamwork, and full-stack problem-solving skills while delivering a responsive, user-friendly platform.",
-      skills: "Search Engine Optimization (SEO) · Tailwind CSS · Front-End Development · HTML · Content Management Systems (CMS) · React.js · Responsive Web Design",
+      company: "University of Guelph",
+      position: "Website Training & Support Specialist · Co-op",
+      period: "Jan 2025 - Aug 2025",
+      description: "At the University of Guelph, I acted as a Website Training & Support Specialist Co-op, delivering expert training and technical support for Drupal, Content Hub, and SharePoint to enhance client proficiency and platform efficiency. I developed comprehensive documentation, release notes, and training materials, ensuring clarity and accessibility for users. Additionally, I performed accessibility audits, collaborated with developers to resolve issues, and efficiently managed client design and customization requests within Agile Scrum frameworks—streamlining workflows and improving system usability.",
+      skills: "Drupal · SharePoint · Content Hub · Technical Documentation · Training & Development · Accessibility Testing · Technical Support · Agile Scrum · Content Management Systems (CMS) · Project Management · User Experience (UX)",
       side: "left"
-    },
-    {
-      company: "Evstry",
-      position: "Full-stack Developer · Internship",
-      period: "Jan 2024 - Aug 2024",
-      description: "At Evstry, I played a key role in revamping the cash gift registry platform by leading website redesign efforts using Figma, CMS, Webflow, and React in close collaboration with the manager. I managed a team of five, ensuring efficient and timely task completion, while also overseeing ad campaigns, including SEO and pixel placement for YouTube, TikTok, and Instagram ads. Additionally, I enhanced user engagement by creating and managing email newsletters and facilitated smooth project execution by conducting regular team meetings to gather requirements, demo progress, and collect feedback—significantly improving platform performance and laying the groundwork for future app development.",
-      skills: "Search Engine Optimization (SEO) · Front-End Development · Web Development · Webflow · Project Management · Cascading Style Sheets (CSS) · HTML · Content Management Systems (CMS) · React.js · Figma (Software) · JavaScript · Responsive Web Design",
-      side: "right"
     },
     {
       company: "More Than Circumstance",
@@ -37,14 +29,22 @@ const Timeline = () => {
       period: "May 2024 - Sep 2024",
       description: "At More Than Circumstance, I supported the nonprofit's mission by leading a full website redesign to enhance user experience and engagement. Using Figma, I translated the manager's vision into wireframes and prototypes before bringing the design to life with Webflow and React. While guiding a team to execute tasks efficiently, I improved critical features including donations, e-commerce, blogs, and event updates, strengthening the platform's functionality. Through this process, I deepened my expertise in content management, site mapping, and accessibility compliance, ensuring the final product met AODA standards for an inclusive user experience.",
       skills: "Search Engine Optimization (SEO) · Front-End Development · Web Development · Webflow · Project Management · Cascading Style Sheets (CSS) · Content Management Systems (CMS) · React.js · Figma (Software) · Responsive Web Design",
+      side: "right"
+    },
+    {
+      company: "Evstry",
+      position: "Full-stack Developer · Internship",
+      period: "Jan 2024 - Aug 2024",
+      description: "At Evstry, I played a key role in revamping the cash gift registry platform by leading website redesign efforts using Figma, CMS, Webflow, and React in close collaboration with the manager. I managed a team of five, ensuring efficient and timely task completion, while also overseeing ad campaigns, including SEO and pixel placement for YouTube, TikTok, and Instagram ads. Additionally, I enhanced user engagement by creating and managing email newsletters and facilitated smooth project execution by conducting regular team meetings to gather requirements, demo progress, and collect feedback—significantly improving platform performance and laying the groundwork for future app development.",
+      skills: "Search Engine Optimization (SEO) · Front-End Development · Web Development · Webflow · Project Management · Cascading Style Sheets (CSS) · HTML · Content Management Systems (CMS) · React.js · Figma (Software) · JavaScript · Responsive Web Design",
       side: "left"
     },
     {
-      company: "University of Guelph",
-      position: "Website Training & Support Specialist · Co-op",
-      period: "Jan 2025 - Aug 2025",
-      description: "At the University of Guelph, I acted as a Website Training & Support Specialist Co-op, delivering expert training and technical support for Drupal, Content Hub, and SharePoint to enhance client proficiency and platform efficiency. I developed comprehensive documentation, release notes, and training materials, ensuring clarity and accessibility for users. Additionally, I performed accessibility audits, collaborated with developers to resolve issues, and efficiently managed client design and customization requests within Agile Scrum frameworks—streamlining workflows and improving system usability.",
-      skills: "Drupal · SharePoint · Content Hub · Technical Documentation · Training & Development · Accessibility Testing · Technical Support · Agile Scrum · Content Management Systems (CMS) · Project Management · User Experience (UX)",
+      company: "Spice Mart",
+      position: "Full-stack Developer · Freelance",
+      period: "Jun 2023 - Aug 2023",
+      description: "As a Freelance Full-stack Developer for Spice Mart, I helped elevate Barrie's premier South Indian store by building a dynamic, full-stack website using Tailwind CSS, Next.js, MongoDB, and React. Collaborating with a peer, I integrated a RESTful API to optimize data management and implemented secure CRUD operations via Auth0 for enhanced security. The project empowered the client with easy self-updates for products, pricing, and weekly flyers—streamlining their digital operations. Through hands-on development, client meetings, and iterative research, I refined my project management, teamwork, and full-stack problem-solving skills while delivering a responsive, user-friendly platform.",
+      skills: "Search Engine Optimization (SEO) · Tailwind CSS · Front-End Development · HTML · Content Management Systems (CMS) · React.js · Responsive Web Design",
       side: "right"
     }
   ];
@@ -107,14 +107,6 @@ const Timeline = () => {
         .timeline-text-box:hover {
           background: #232b42;
           transform: translateY(-5px) scale(1.05);
-        }
-        
-        .timeline-left-container .timeline-text-box:hover {
-          transform: translateY(-5px) scale(1.05) translateX(-10px);
-        }
-        
-        .timeline-right-container .timeline-text-box:hover {
-          transform: translateY(-5px) scale(1.05) translateX(10px);
         }
         
         .timeline-text-box h2 {
@@ -405,24 +397,14 @@ const Timeline = () => {
             {index === 0 && (
               <div className="timeline-circle-image">
                 <Image 
-                  src="/SMlogo.png" 
-                  alt="Spice Mart Logo"
+                  src="/UOGlogo.jpeg" 
+                  alt="University of Guelph Logo"
                   width={100}
                   height={100}
                 />
               </div>
             )}
             {index === 1 && (
-              <div className="timeline-circle-image">
-                <Image 
-                  src="/Elogo.png" 
-                  alt="Evstry Logo"
-                  width={100}
-                  height={100}
-                />
-              </div>
-            )}
-            {index === 2 && (
               <div className="timeline-circle-image">
                 <Image 
                   src="/MTClogo.png" 
@@ -432,11 +414,21 @@ const Timeline = () => {
                 />
               </div>
             )}
+            {index === 2 && (
+              <div className="timeline-circle-image">
+                <Image 
+                  src="/Elogo.png" 
+                  alt="Evstry Logo"
+                  width={100}
+                  height={100}
+                />
+              </div>
+            )}
             {index === 3 && (
               <div className="timeline-circle-image">
                 <Image 
-                  src="/UOGlogo.jpeg" 
-                  alt="University of Guelph Logo"
+                  src="/SMlogo.png" 
+                  alt="Spice Mart Logo"
                   width={100}
                   height={100}
                 />
