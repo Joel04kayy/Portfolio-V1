@@ -3,6 +3,7 @@
 import GradientBackground from './components/GradientBackground'
 import Navbar from './components/Navbar'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import Link from 'next/link'
 
 export default function Home() {
   const [text] = useTypewriter({
@@ -54,13 +55,22 @@ export default function Home() {
               <path d="M22 8.62V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.62l9.55 4.77a1 1 0 0 0 .9 0L22 8.62zM12 11.38l-10-5V6c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v.38l-10 5z"/>
             </svg>
           </a>
-          <a href="/resume.pdf" download className="social-button cv">
-            <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" style={{ width: '25px', height: '25px' }}>
-              <text x="22" y="22" text-anchor="middle" dominant-baseline="middle" font-size="24" font-weight="900" fill="#000f1d" style={{ fontStretch: 'expanded' }}>CV</text>
+          <Link href="/resume" className="social-button cv">
+            <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" style={{ width: '25px', height: '25px' }} className="cv-icon">
+              <text x="22" y="22" text-anchor="middle" dominant-baseline="middle" font-size="24" font-weight="900" style={{ fontStretch: 'expanded' }}>CV</text>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
+
+      <style jsx>{`
+        .cv-icon {
+          fill: #000f1d;
+        }
+        .social-button:hover .cv-icon {
+          fill: #ffffff;
+        }
+      `}</style>
     </main>
   )
 }
