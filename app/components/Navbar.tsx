@@ -51,6 +51,14 @@ export default function Navbar() {
               Experience
             </Link>
             <Link 
+              href="/resume" 
+              className={`nav-link px-3 py-2 text-xl font-medium ${
+                pathname === '/resume' ? 'text-blue-400' : 'text-gray-300'
+              }`}
+            >
+              Resume
+            </Link>
+            <Link 
               href="/contact" 
               className={`nav-link px-3 py-2 text-xl font-medium ${
                 pathname === '/contact' ? 'text-blue-400' : 'text-gray-300'
