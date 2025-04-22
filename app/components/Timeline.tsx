@@ -372,7 +372,7 @@ const Timeline = () => {
         .work-term-button {
           margin-top: 40px;
           padding: 12px 24px;
-          background: linear-gradient(82.3deg, rgba(28, 160, 244, 1) 10.8%, rgba(45, 73, 255, 1) 94.3%);
+          background: #1e2538;
           color: white;
           border: none;
           border-radius: 8px;
@@ -383,9 +383,8 @@ const Timeline = () => {
           text-decoration: none;
           display: inline-block;
           position: relative;
-          z-index: 10;
-          box-shadow: 0 4px 15px rgba(28, 160, 244, 0.2);
-          overflow: hidden;
+          z-index: 1;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .work-term-button::before {
@@ -395,24 +394,54 @@ const Timeline = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(82.3deg, rgba(45, 73, 255, 1) 10.8%, rgba(28, 160, 244, 1) 94.3%);
-          opacity: 0;
+          background: linear-gradient(82.3deg, rgba(28, 160, 244, 1) 10.8%, rgba(45, 73, 255, 1) 94.3%);
+          opacity: 0.1;
           transition: opacity 0.3s ease;
           z-index: -1;
+          border-radius: 8px;
+        }
+
+        .work-term-button::after {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background: linear-gradient(82.3deg, rgba(28, 160, 244, 1) 10.8%, rgba(45, 73, 255, 1) 94.3%);
+          border-radius: 10px;
+          z-index: -2;
+          animation: rotate 3s linear infinite;
+          opacity: 1;
+          background-size: 200% 200%;
+        }
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg);
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            transform: rotate(360deg);
+            background-position: 0% 50%;
+          }
         }
 
         .work-term-button:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(28, 160, 244, 0.3);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .work-term-button:hover::before {
-          opacity: 1;
+          opacity: 0.2;
         }
 
         .work-term-button:active {
           transform: translateY(0);
-          box-shadow: 0 2px 10px rgba(28, 160, 244, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
       `}</style>
 
