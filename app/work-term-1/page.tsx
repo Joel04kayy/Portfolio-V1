@@ -15,18 +15,18 @@ export default function WorkTerm1() {
           {/* Collapsible Introduction Section */}
           <div className="bg-[#1e2538] rounded-lg p-8 shadow-lg mb-8">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-32 h-32 relative">
+              <div className="w-32 h-32 relative rounded-full overflow-hidden border-4 border-[#1ca0f4]">
                 <Image
-                  src="/logos/university-of-guelph.png"
+                  src="/UOGlogo.jpeg"
                   alt="University of Guelph Logo"
                   fill
-                  className="object-contain"
+                  className="object-cover scale-110"
                 />
               </div>
               <div className="flex-1">
                 <h2 className="text-2xl font-semibold mb-2">University of Guelph</h2>
                 <h3 className="text-xl text-[#1ca0f4] mb-2">Website Training & Support Specialist</h3>
-                <p className="text-gray-300 mb-2">January 2025 - August 2025</p>
+                <p className="text-gray-300 mb-2">January 2025 - April 2025</p>
                 <p className="text-gray-300">Co-op Work Term 1</p>
               </div>
             </div>
