@@ -58,6 +58,7 @@ const Timeline = () => {
           justify-content: center;
           align-items: center;
           padding: 20px;
+          flex-direction: column;
         }
         
         .timeline-main {
@@ -367,6 +368,27 @@ const Timeline = () => {
             left: 17px;
           }
         }
+
+        .work-term-button {
+          margin-top: 40px;
+          padding: 12px 24px;
+          background: #1ca0f4;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          font-size: 1rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        .work-term-button:hover {
+          background: #1890d4;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(28, 160, 244, 0.2);
+        }
       `}</style>
 
       <div className="timeline-main">
@@ -437,6 +459,9 @@ const Timeline = () => {
           </div>
         ))}
       </div>
+      <a href="/work-term-1" className="work-term-button">
+        View Work Term 1 Report
+      </a>
     </div>
   );
 };
