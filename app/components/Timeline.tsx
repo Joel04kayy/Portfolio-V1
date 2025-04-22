@@ -372,22 +372,47 @@ const Timeline = () => {
         .work-term-button {
           margin-top: 40px;
           padding: 12px 24px;
-          background: #1ca0f4;
+          background: linear-gradient(82.3deg, rgba(28, 160, 244, 1) 10.8%, rgba(45, 73, 255, 1) 94.3%);
           color: white;
           border: none;
-          border-radius: 6px;
+          border-radius: 8px;
           font-size: 1rem;
           font-weight: 500;
           cursor: pointer;
           transition: all 0.3s ease;
           text-decoration: none;
           display: inline-block;
+          position: relative;
+          z-index: 10;
+          box-shadow: 0 4px 15px rgba(28, 160, 244, 0.2);
+          overflow: hidden;
+        }
+
+        .work-term-button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(82.3deg, rgba(45, 73, 255, 1) 10.8%, rgba(28, 160, 244, 1) 94.3%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: -1;
         }
 
         .work-term-button:hover {
-          background: #1890d4;
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(28, 160, 244, 0.2);
+          box-shadow: 0 6px 20px rgba(28, 160, 244, 0.3);
+        }
+
+        .work-term-button:hover::before {
+          opacity: 1;
+        }
+
+        .work-term-button:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 10px rgba(28, 160, 244, 0.2);
         }
       `}</style>
 
