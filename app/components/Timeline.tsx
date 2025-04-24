@@ -369,8 +369,15 @@ const Timeline = () => {
           }
         }
 
-        .work-term-button {
+        .work-term-buttons {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
           margin-top: 40px;
+        }
+
+        .work-term-button {
           align-items: center;
           background-image: linear-gradient(144deg, rgba(28, 160, 244, 1), rgba(45, 73, 255, 1) 50%, rgba(28, 160, 244, 1));
           border: 0;
@@ -414,6 +421,18 @@ const Timeline = () => {
 
         .work-term-button:active {
           transform: scale(0.9);
+        }
+
+        @media screen and (max-width: 768px) {
+          .work-term-buttons {
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .work-term-button {
+            width: 100%;
+            max-width: 300px;
+          }
         }
       `}</style>
 
@@ -485,9 +504,20 @@ const Timeline = () => {
           </div>
         ))}
       </div>
-      <a href="/work-term-1" className="work-term-button">
-        <span>View Work Term 1 Report</span>
-      </a>
+      <div className="work-term-buttons">
+        <a href="/work-term-1" className="work-term-button">
+          <span>View Work Term 1 Report</span>
+        </a>
+        <a href="/work-term-2" className="work-term-button">
+          <span>View Work Term 2 Report</span>
+        </a>
+        <a href="/work-term-3" className="work-term-button">
+          <span>View Work Term 3 Report</span>
+        </a>
+        <a href="/work-term-4" className="work-term-button">
+          <span>View Work Term 4 Report</span>
+        </a>
+      </div>
     </div>
   );
 };
