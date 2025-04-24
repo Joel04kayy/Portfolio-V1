@@ -371,77 +371,49 @@ const Timeline = () => {
 
         .work-term-button {
           margin-top: 40px;
-          padding: 12px 24px;
-          background: #1e2538;
-          color: white;
-          border: none;
+          align-items: center;
+          background-image: linear-gradient(144deg, rgba(28, 160, 244, 1), rgba(45, 73, 255, 1) 50%, rgba(28, 160, 244, 1));
+          border: 0;
           border-radius: 8px;
-          font-size: 1rem;
-          font-weight: 500;
-          cursor: pointer;
-          transition: all 0.3s ease;
+          box-shadow: rgba(28, 160, 244, 0.2) 0 15px 30px -5px;
+          box-sizing: border-box;
+          color: #ffffff;
+          display: flex;
+          font-size: 18px;
+          justify-content: center;
+          line-height: 1em;
+          max-width: 100%;
+          min-width: 140px;
+          padding: 3px;
           text-decoration: none;
-          display: inline-block;
-          position: relative;
-          z-index: 1;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          white-space: nowrap;
+          cursor: pointer;
+          transition: all 0.3s;
         }
 
-        .work-term-button::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
+        .work-term-button:active,
+        .work-term-button:hover {
+          outline: 0;
+        }
+
+        .work-term-button span {
+          background-color: #1e2538;
+          padding: 16px 24px;
+          border-radius: 6px;
           width: 100%;
           height: 100%;
-          background: linear-gradient(82.3deg, rgba(28, 160, 244, 1) 10.8%, rgba(45, 73, 255, 1) 94.3%);
-          opacity: 0.1;
-          transition: opacity 0.3s ease;
-          z-index: -1;
-          border-radius: 8px;
+          transition: 300ms;
         }
 
-        .work-term-button::after {
-          content: '';
-          position: absolute;
-          top: -2px;
-          left: -2px;
-          right: -2px;
-          bottom: -2px;
-          background: linear-gradient(82.3deg, rgba(28, 160, 244, 1) 10.8%, rgba(45, 73, 255, 1) 94.3%);
-          border-radius: 10px;
-          z-index: -2;
-          animation: rotate 3s linear infinite;
-          opacity: 1;
-          background-size: 200% 200%;
-        }
-
-        @keyframes rotate {
-          0% {
-            transform: rotate(0deg);
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            transform: rotate(360deg);
-            background-position: 0% 50%;
-          }
-        }
-
-        .work-term-button:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .work-term-button:hover::before {
-          opacity: 0.2;
+        .work-term-button:hover span {
+          background: none;
         }
 
         .work-term-button:active {
-          transform: translateY(0);
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          transform: scale(0.9);
         }
       `}</style>
 
@@ -514,7 +486,7 @@ const Timeline = () => {
         ))}
       </div>
       <a href="/work-term-1" className="work-term-button">
-        View Work Term 1 Report
+        <span>View Work Term 1 Report</span>
       </a>
     </div>
   );
