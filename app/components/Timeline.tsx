@@ -401,26 +401,49 @@ const Timeline = () => {
           transition: all 0.3s;
         }
 
-        .work-term-button:active,
-        .work-term-button:hover {
-          outline: 0;
-        }
-
         .work-term-button span {
           background-color: #1e2538;
-          padding: 16px 24px;
+          padding: 8px 24px;
           border-radius: 6px;
           width: 100%;
           height: 100%;
           transition: 300ms;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          min-height: 35px;
+          min-width: 200px;
         }
 
         .work-term-button:hover span {
           background: none;
         }
 
-        .work-term-button:active {
-          transform: scale(0.9);
+        .work-term-button .hover-text {
+          display: none;
+          text-align: center;
+          width: 100%;
+          min-height: 35px;
+          min-width: 200px;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .work-term-button .default-text {
+          min-height: 35px;
+          min-width: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .work-term-button:hover .default-text {
+          display: none;
+        }
+
+        .work-term-button:hover .hover-text {
+          display: flex;
         }
 
         @media screen and (max-width: 768px) {
@@ -506,16 +529,19 @@ const Timeline = () => {
       </div>
       <div className="work-term-buttons">
         <a href="/work-term-1" className="work-term-button">
-          <span>View Work Term 1 Report</span>
+          <span>Work Term 1 Report</span>
         </a>
         <div className="work-term-button">
-          <span>View Work Term 2 Report</span>
+          <span>
+            <span className="default-text">Work Term 2 Report</span>
+            <span className="hover-text">Not available yet</span>
+          </span>
         </div>
         <a href="/work-term-3" className="work-term-button">
-          <span>View Work Term 3 Report</span>
+          <span>Work Term 3 Report</span>
         </a>
         <a href="/work-term-4" className="work-term-button">
-          <span>View Work Term 4 Report</span>
+          <span>Work Term 4 Report</span>
         </a>
       </div>
     </div>
