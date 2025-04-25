@@ -508,9 +508,9 @@ const Timeline = () => {
         <a href="/work-term-1" className="work-term-button">
           <span>View Work Term 1 Report</span>
         </a>
-        <a href="/work-term-2" className="work-term-button">
+        <div className="work-term-button">
           <span>View Work Term 2 Report</span>
-        </a>
+        </div>
         <a href="/work-term-3" className="work-term-button">
           <span>View Work Term 3 Report</span>
         </a>
