@@ -389,8 +389,8 @@ const Timeline = () => {
           font-size: 18px;
           justify-content: center;
           line-height: 1em;
-          max-width: 100%;
-          min-width: 140px;
+          width: 240px;
+          min-width: 240px;
           padding: 3px;
           text-decoration: none;
           user-select: none;
@@ -413,11 +413,6 @@ const Timeline = () => {
           justify-content: center;
           text-align: center;
           min-height: 35px;
-          min-width: 200px;
-        }
-
-        .work-term-button:hover span {
-          background: none;
         }
 
         .work-term-button .hover-text {
@@ -425,14 +420,12 @@ const Timeline = () => {
           text-align: center;
           width: 100%;
           min-height: 35px;
-          min-width: 200px;
           align-items: center;
           justify-content: center;
         }
 
         .work-term-button .default-text {
           min-height: 35px;
-          min-width: 200px;
           display: flex;
           align-items: center;
           justify-content: center;
