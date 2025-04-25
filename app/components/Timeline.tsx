@@ -537,12 +537,18 @@ const Timeline = () => {
             <span className="hover-text">Not available yet</span>
           </span>
         </div>
-        <a href="/work-term-3" className="work-term-button">
-          <span>Work Term 3 Report</span>
-        </a>
-        <a href="/work-term-4" className="work-term-button">
-          <span>Work Term 4 Report</span>
-        </a>
+        <div className="work-term-button">
+          <span>
+            <span className="default-text">Work Term 3 Report</span>
+            <span className="hover-text">Not available yet</span>
+          </span>
+        </div>
+        <div className="work-term-button">
+          <span>
+            <span className="default-text">Work Term 4 Report</span>
+            <span className="hover-text">Not available yet</span>
+          </span>
+        </div>
       </div>
     </div>
   );
