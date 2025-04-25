@@ -1,6 +1,5 @@
 'use client';
 
-
 const skills = [
   // Programming Languages
   { name: 'JavaScript', category: 'Language' },

@@ -9,7 +9,7 @@ export default function AnimatedBackground() {
           '--size': '500px',
           '--speed': '50s',
           '--easing': 'cubic-bezier(0.8, 0.2, 0.2, 0.8)',
-        } as React.CSSProperties}
+        }}
       />
     </div>
   );

@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Timeline = () => {
   // Animation effect for timeline items
   useEffect(() => {
-    const containers = document.querySelectorAll<HTMLElement>('.timeline-container-item');
+    const containers = document.querySelectorAll('.timeline-container-item');
     containers.forEach((container, index) => {
       setTimeout(() => {
         container.style.opacity = '1';

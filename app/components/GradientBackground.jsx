@@ -3,14 +3,14 @@
 import { useEffect, useRef } from 'react';
 
 export default function GradientBackground() {
-  const gradientRef = useRef<HTMLDivElement>(null);
+  const gradientRef = useRef(null);
 
   useEffect(() => {
     const gradient = gradientRef.current;
     if (!gradient) return;
 
     // Add mouse move effect
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       const x = e.clientX / window.innerWidth;
       const y = e.clientY / window.innerHeight;
       
@@ -31,7 +31,7 @@ export default function GradientBackground() {
           '--size': '575px',
           '--speed': '50s',
           '--easing': 'cubic-bezier(0.8, 0.2, 0.2, 0.8)',
-        } as React.CSSProperties}
+        }}
       />
     </div>
   );

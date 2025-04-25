@@ -1,13 +1,8 @@
 'use client';
 
 import { useTileAnimation } from '../hooks/useTileAnimation';
-import { GitHubRepo } from '../services/github';
 
-interface ProjectTileProps {
-  repo: GitHubRepo;
-}
-
-export default function ProjectTile({ repo }: ProjectTileProps) {
+export default function ProjectTile({ repo }) {
   const tileRef = useTileAnimation();
 
   return (

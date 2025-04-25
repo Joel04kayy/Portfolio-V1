@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import "./globals.css";
 
@@ -8,7 +7,7 @@ const comfortaa = Comfortaa({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Joel Kayyalakam",
   description: "Welcome to my portfolio! Explore my journey through software development, innovative projects, and professional experiences.",
   icons: {
@@ -37,11 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${comfortaa.className} flex flex-col min-h-screen`}>
@@ -49,4 +44,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+} 
