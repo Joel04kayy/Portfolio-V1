@@ -39,7 +39,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Introduction</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I balanced technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards.
+                    During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I balanced technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards. My position was instrumental in bridging the gap between technical systems and end-users, ensuring that campus departments could effectively manage their digital presence.
                   </p>
                 </div>
               </section>
@@ -48,7 +48,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">About the Employer</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    The University of Guelph's Computing & Communications Services (CCS) serves as the central IT department, providing essential technology infrastructure and services to the university community. CCS operates under six core values: Service Culture, Integrity, Individual Leadership, Teamwork, Agility, and Communication. The Web & Development Solutions team, where I was placed, specializes in delivering and maintaining websites using Drupal, Content Hub, and SharePoint platforms. The team provides comprehensive services including hosting, support, training, and security maintenance, ensuring all campus websites maintain a standardized, U of G branded, responsive, and AODA-compliant presence.
+                    The University of Guelph's Computing & Communications Services (CCS) serves as the central IT department, providing essential technology infrastructure and services to the university community. CCS operates under six core values: Service Culture, Integrity, Individual Leadership, Teamwork, Agility, and Communication. The Web & Development Solutions team, where I was placed, specializes in delivering and maintaining websites using Drupal, Content Hub, and SharePoint platforms. The team provides comprehensive services including hosting, support, training, and security maintenance, ensuring all campus websites maintain a standardized, U of G branded, responsive, and AODA-compliant presence. This commitment to excellence in digital services helps maintain the university's reputation as a leading educational institution.
                   </p>
                 </div>
               </section>
@@ -60,16 +60,17 @@ export default function WorkTerm1() {
                     As a Website Training & Support Specialist Co-op, my primary responsibilities included:
                   </p>
                   <ul className="list-disc pl-6 text-gray-300 space-y-2 mt-4">
-                    <li>Delivering platform training and support for Drupal, Content Hub, and SharePoint to campus website customers</li>
-                    <li>Maintaining and enhancing platform documentation, release notes, and training materials</li>
-                    <li>Conducting website accessibility audits and collaborating with developers to resolve issues</li>
+                    <li>Delivering expert training and technical support for Drupal, Content Hub, and SharePoint platforms to enhance client proficiency and platform efficiency</li>
+                    <li>Developing comprehensive documentation, release notes, and training materials to ensure clarity and accessibility for users</li>
+                    <li>Conducting thorough accessibility audits and collaborating with developers to resolve issues, ensuring compliance with AODA standards</li>
                     <li>Providing comprehensive website and content management support to campus clients</li>
-                    <li>Participating in weekly Agile Scrum development processes</li>
-                    <li>Handling client project requests for website design changes and customization</li>
-                    <li>Managing client queries and resolving technical issues</li>
+                    <li>Participating in weekly Agile Scrum development processes to streamline workflows and improve system usability</li>
+                    <li>Managing client design and customization requests efficiently within the Agile framework</li>
+                    <li>Handling client queries and resolving technical issues promptly</li>
+                    <li>Collaborating with developers to identify and fix bugs in the tracking system</li>
                   </ul>
                   <p className="text-gray-300 mt-4">
-                    A typical day might involve conducting training sessions, updating documentation, assisting with website layouts, ensuring accessibility compliance, and documenting bugs in the tracking system.
+                    A typical day might involve conducting one-on-one or group training sessions, updating documentation to reflect new features, assisting with website layouts and accessibility compliance, and documenting bugs in the tracking system. The role required a balance of technical knowledge and excellent communication skills to effectively support clients with varying levels of technical expertise.
                   </p>
                 </div>
               </section>
@@ -84,6 +85,8 @@ export default function WorkTerm1() {
                     <li>Improve time management and organizational skills while managing multiple client requests across different platforms</li>
                     <li>Strengthen interpersonal communication skills in managing client expectations and handling complex website changes</li>
                     <li>Master the Content Hub migration process and best practices for maintaining data integrity and accessibility</li>
+                    <li>Develop expertise in web accessibility standards and implementation</li>
+                    <li>Enhance documentation and technical writing skills</li>
                   </ul>
                   
                   <h4 className="text-xl font-semibold mt-6 mb-2">Achievements</h4>
@@ -93,6 +96,8 @@ export default function WorkTerm1() {
                     <li>Conducted accessibility audits and implemented solutions to ensure AODA and WCAG 2.0 compliance</li>
                     <li>Successfully completed multiple website migrations while maintaining data integrity</li>
                     <li>Developed strong client relationships through effective communication and support</li>
+                    <li>Streamlined workflows and improved system usability through Agile Scrum participation</li>
+                    <li>Enhanced platform efficiency through expert training and technical support</li>
                   </ul>
                 </div>
               </section>
@@ -101,7 +106,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Conclusions</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    This work term significantly enhanced my technical and professional skills. I developed expertise in web accessibility, content management systems, and technical communication. The experience taught me the importance of balancing technical knowledge with user-friendly communication, especially when working with non-technical clients. I learned to manage multiple priorities effectively while maintaining high-quality service standards. The exposure to Agile methodologies and team collaboration has prepared me well for future roles in technology and client support. This experience has reinforced my interest in web development and accessibility, and I look forward to applying these skills in future opportunities.
+                    This work term significantly enhanced my technical and professional skills. I developed expertise in web accessibility, content management systems, and technical communication. The experience taught me the importance of balancing technical knowledge with user-friendly communication, especially when working with non-technical clients. I learned to manage multiple priorities effectively while maintaining high-quality service standards. The exposure to Agile methodologies and team collaboration has prepared me well for future roles in technology and client support. This experience has reinforced my interest in web development and accessibility, and I look forward to applying these skills in future opportunities. The role provided valuable insights into the intersection of technology and user experience, emphasizing the importance of making complex systems accessible and user-friendly.
                   </p>
                 </div>
               </section>
@@ -110,7 +115,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Acknowledgements</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    I would like to express my sincere gratitude to my supervisor and the entire Web & Development Solutions team at CCS for their guidance and support throughout my work term. Special thanks to the Manager of CCS Web & Development Solutions for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience.
+                    I would like to express my sincere gratitude to my supervisor and the entire Web & Development Solutions team at CCS for their guidance and support throughout my work term. Special thanks to the Manager of CCS Web & Development Solutions for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience. The collaborative environment and commitment to excellence at CCS have been instrumental in my professional development.
                   </p>
                 </div>
               </section>
