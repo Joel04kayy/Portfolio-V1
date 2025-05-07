@@ -115,7 +115,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Acknowledgements</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    I would like to express my sincere gratitude to my supervisor and the entire Web & Development Solutions team at CCS for their guidance and support throughout my work term. Special thanks to the Manager of CCS Web & Development Solutions for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience. The collaborative environment and commitment to excellence at CCS have been instrumental in my professional development.
+                    I would like to express my sincere gratitude to Vinod, my supervisor and the entire Developers Team at CCS for their guidance and support throughout my work term. Special thanks to the Manager of CCS Web & Development Solutions for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience. The collaborative environment and commitment to excellence at CCS have been instrumental in my professional development.
                   </p>
                 </div>
               </section>
