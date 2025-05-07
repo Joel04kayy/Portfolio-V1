@@ -39,7 +39,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Introduction</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    [Your introduction text will go here. This should provide an overview of your work term experience and what readers can expect from this report.]
+                    During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I balanced technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards.
                   </p>
                 </div>
               </section>
@@ -48,11 +48,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">About the Employer</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    [Information about the University of Guelph, including:
-                    - Brief history and mission
-                    - Department/team structure
-                    - Key projects and initiatives
-                    - Your specific team's role]
+                    The University of Guelph's Computing & Communications Services (CCS) serves as the central IT department, providing essential technology infrastructure and services to the university community. CCS operates under six core values: Service Culture, Integrity, Individual Leadership, Teamwork, Agility, and Communication. The Web & Development Solutions team, where I was placed, specializes in delivering and maintaining websites using Drupal, Content Hub, and SharePoint platforms. The team provides comprehensive services including hosting, support, training, and security maintenance, ensuring all campus websites maintain a standardized, U of G branded, responsive, and AODA-compliant presence.
                   </p>
                 </div>
               </section>
@@ -61,11 +57,19 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Job Description</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    [Detailed job description including:
-                    - Primary responsibilities
-                    - Daily tasks and activities
-                    - Tools and technologies used
-                    - Team collaboration aspects]
+                    As a Website Training & Support Specialist Co-op, my primary responsibilities included:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-300 space-y-2 mt-4">
+                    <li>Delivering platform training and support for Drupal, Content Hub, and SharePoint to campus website customers</li>
+                    <li>Maintaining and enhancing platform documentation, release notes, and training materials</li>
+                    <li>Conducting website accessibility audits and collaborating with developers to resolve issues</li>
+                    <li>Providing comprehensive website and content management support to campus clients</li>
+                    <li>Participating in weekly Agile Scrum development processes</li>
+                    <li>Handling client project requests for website design changes and customization</li>
+                    <li>Managing client queries and resolving technical issues</li>
+                  </ul>
+                  <p className="text-gray-300 mt-4">
+                    A typical day might involve conducting training sessions, updating documentation, assisting with website layouts, ensuring accessibility compliance, and documenting bugs in the tracking system.
                   </p>
                 </div>
               </section>
@@ -75,16 +79,20 @@ export default function WorkTerm1() {
                 <div className="prose prose-invert max-w-none">
                   <h4 className="text-xl font-semibold mb-2">Learning Goals</h4>
                   <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                    <li>[Goal 1]</li>
-                    <li>[Goal 2]</li>
-                    <li>[Goal 3]</li>
+                    <li>Develop public speaking and teaching skills through leading client training sessions on Content Hub, Drupal, and SharePoint</li>
+                    <li>Enhance problem-solving abilities by handling complex support tickets and collaborating with team members</li>
+                    <li>Improve time management and organizational skills while managing multiple client requests across different platforms</li>
+                    <li>Strengthen interpersonal communication skills in managing client expectations and handling complex website changes</li>
+                    <li>Master the Content Hub migration process and best practices for maintaining data integrity and accessibility</li>
                   </ul>
                   
                   <h4 className="text-xl font-semibold mt-6 mb-2">Achievements</h4>
                   <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                    <li>[Achievement 1]</li>
-                    <li>[Achievement 2]</li>
-                    <li>[Achievement 3]</li>
+                    <li>Successfully delivered multiple training sessions, receiving positive feedback from clients</li>
+                    <li>Created and maintained comprehensive documentation for platform features and updates</li>
+                    <li>Conducted accessibility audits and implemented solutions to ensure AODA and WCAG 2.0 compliance</li>
+                    <li>Successfully completed multiple website migrations while maintaining data integrity</li>
+                    <li>Developed strong client relationships through effective communication and support</li>
                   </ul>
                 </div>
               </section>
@@ -93,11 +101,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Conclusions</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    [Your conclusions and reflections on:
-                    - Skills developed
-                    - Challenges overcome
-                    - Lessons learned
-                    - Future career impact]
+                    This work term significantly enhanced my technical and professional skills. I developed expertise in web accessibility, content management systems, and technical communication. The experience taught me the importance of balancing technical knowledge with user-friendly communication, especially when working with non-technical clients. I learned to manage multiple priorities effectively while maintaining high-quality service standards. The exposure to Agile methodologies and team collaboration has prepared me well for future roles in technology and client support. This experience has reinforced my interest in web development and accessibility, and I look forward to applying these skills in future opportunities.
                   </p>
                 </div>
               </section>
@@ -106,10 +110,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Acknowledgements</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    [Your acknowledgements to:
-                    - Supervisor and team members
-                    - University support staff
-                    - Any other significant contributors]
+                    I would like to express my sincere gratitude to my supervisor and the entire Web & Development Solutions team at CCS for their guidance and support throughout my work term. Special thanks to the Manager of CCS Web & Development Solutions for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience.
                   </p>
                 </div>
               </section>
