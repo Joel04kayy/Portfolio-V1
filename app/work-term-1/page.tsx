@@ -103,6 +103,36 @@ export default function WorkTerm1() {
               </section>
 
               <section>
+                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Learning Goals Achievement</h3>
+                <div className="prose prose-invert max-w-none">
+                  <h4 className="text-xl font-semibold mb-2">Oral Communication – Leading Client Training Sessions</h4>
+                  <p className="text-gray-300 mb-4">
+                    I successfully developed my public speaking and teaching skills by conducting numerous training sessions for clients on Drupal, Content Hub, and SharePoint platforms. Through careful preparation and clear communication, I made complex technical concepts accessible to non-technical users. The positive feedback received from multiple client sessions and the increased confidence shown by clients in managing their websites independently demonstrated the effectiveness of my training approach.
+                  </p>
+
+                  <h4 className="text-xl font-semibold mb-2">Problem-Solving – Handling Complex Tickets</h4>
+                  <p className="text-gray-300 mb-4">
+                    I significantly improved my problem-solving abilities by actively seeking out and successfully resolving challenging tickets in FootPrints. By stepping outside my comfort zone and utilizing resources like the wiki, I developed effective solutions for unfamiliar issues. Collaboration with team members enhanced my ability to tackle complex problems, and I gained confidence in handling similar issues independently.
+                  </p>
+
+                  <h4 className="text-xl font-semibold mb-2">Time Management – Managing Multiple Client Requests</h4>
+                  <p className="text-gray-300 mb-4">
+                    I strengthened my time management skills by efficiently handling multiple client requests across Drupal, SharePoint, and Content Hub platforms. Through effective prioritization and organization, I maintained consistent progress on all projects while meeting deadlines. The positive feedback received from both clients and team members validated my improved ability to manage multiple responsibilities effectively.
+                  </p>
+
+                  <h4 className="text-xl font-semibold mb-2">Client Communication – Managing Expectations</h4>
+                  <p className="text-gray-300 mb-4">
+                    I enhanced my interpersonal communication skills by effectively managing client expectations, particularly during complex website changes and issue resolution. By setting clear timelines and maintaining transparent communication, I ensured clients felt supported throughout their projects. The positive feedback received from clients on my communication approach demonstrated my growth in this area.
+                  </p>
+
+                  <h4 className="text-xl font-semibold mb-2">Content Hub Migration Process</h4>
+                  <p className="text-gray-300 mb-4">
+                    I developed comprehensive expertise in the Content Hub migration process, successfully guiding multiple departments through their transitions from Drupal. By implementing best practices and maintaining strict attention to data integrity and accessibility standards, I ensured smooth migrations. The successful completion of multiple full-site migrations, along with positive client feedback, demonstrated my mastery of this complex process.
+                  </p>
+                </div>
+              </section>
+
+              <section>
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Conclusions</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
