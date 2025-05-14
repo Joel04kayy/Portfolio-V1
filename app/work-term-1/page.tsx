@@ -39,7 +39,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Introduction</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I balanced technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards. My position was instrumental in bridging the gap between technical systems and end-users, ensuring that campus departments could effectively manage their digital presence.
+                    During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I balanced technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards. My position was instrumental in bridging the gap between technical systems and end-users, ensuring that university departments could effectively manage their digital presence.
                   </p>
                 </div>
               </section>
