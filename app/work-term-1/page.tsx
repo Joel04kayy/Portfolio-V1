@@ -39,7 +39,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Introduction</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I balanced technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards. My position was instrumental in bridging the gap between technical systems and end-users, ensuring that university departments could effectively manage their digital presence.
+                    During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I worked closely with the developers team to balance technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards. My position was instrumental in bridging the gap between technical systems and end-users, ensuring that university departments could effectively manage their digital presence.
                   </p>
                 </div>
               </section>
@@ -67,10 +67,10 @@ export default function WorkTerm1() {
                     <li>Participating in weekly Agile Scrum development processes to streamline workflows and improve system usability</li>
                     <li>Managing client design and customization requests efficiently within the Agile framework</li>
                     <li>Handling client queries and resolving technical issues promptly</li>
-                    <li>Collaborating with developers to identify and fix bugs in the tracking system</li>
+                    <li>Collaborating with developers to identify and fix bugs in ContentHub, Drupal, and SharePoint systems</li>
                   </ul>
                   <p className="text-gray-300 mt-4">
-                    A typical day might involve conducting one-on-one or group training sessions, updating documentation to reflect new features, assisting with website layouts and accessibility compliance, and documenting bugs in the tracking system. The role required a balance of technical knowledge and excellent communication skills to effectively support clients with varying levels of technical expertise.
+                    A typical day might involve attending the daily scrum/standup meeting, checking FootPrints for any tickets to work on, conducting one-on-one or group training sessions, updating documentation to reflect new features, working on website issues and accessibility complaints, and identifying bugs in ContentHub, Drupal, and SharePoint systems. The role required a balance of technical knowledge and excellent communication skills to effectively support clients with varying levels of technical expertise.
                   </p>
                 </div>
               </section>
@@ -94,10 +94,11 @@ export default function WorkTerm1() {
                     <li>Successfully delivered multiple training sessions, receiving positive feedback from clients</li>
                     <li>Created and maintained comprehensive documentation for platform features and updates</li>
                     <li>Conducted accessibility audits and implemented solutions to ensure AODA and WCAG 2.0 compliance</li>
-                    <li>Successfully completed multiple website migrations while maintaining data integrity</li>
+                    <li>Successfully completed multiple website migrations while maintaining data integrity, such as UAIC and the Real Estate Division</li>
                     <li>Developed strong client relationships through effective communication and support</li>
                     <li>Streamlined workflows and improved system usability through Agile Scrum participation</li>
                     <li>Enhanced platform efficiency through expert training and technical support</li>
+                    <li>Worked closely with clients to solve technical issues and improve their website experience</li>
                   </ul>
                 </div>
               </section>
@@ -120,12 +121,7 @@ export default function WorkTerm1() {
                     I strengthened my time management skills by efficiently handling multiple client requests across Drupal, SharePoint, and Content Hub platforms. Through effective prioritization and organization, I maintained consistent progress on all projects while meeting deadlines. The positive feedback received from both clients and team members validated my improved ability to manage multiple responsibilities effectively.
                   </p>
 
-                  <h4 className="text-xl font-semibold mb-2">Client Communication – Managing Expectations</h4>
-                  <p className="text-gray-300 mb-4">
-                    I enhanced my interpersonal communication skills by effectively managing client expectations, particularly during complex website changes and issue resolution. By setting clear timelines and maintaining transparent communication, I ensured clients felt supported throughout their projects. The positive feedback received from clients on my communication approach demonstrated my growth in this area.
-                  </p>
-
-                  <h4 className="text-xl font-semibold mb-2">Content Hub Migration Process</h4>
+                  <h4 className="text-xl font-semibold mb-2">Drupal to Content Hub Migration Process</h4>
                   <p className="text-gray-300 mb-4">
                     I developed comprehensive expertise in the Content Hub migration process, successfully guiding multiple departments through their transitions from Drupal. By implementing best practices and maintaining strict attention to data integrity and accessibility standards, I ensured smooth migrations. The successful completion of multiple full-site migrations, along with positive client feedback, demonstrated my mastery of this complex process.
                   </p>
@@ -145,7 +141,7 @@ export default function WorkTerm1() {
                 <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Acknowledgements</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
-                    I would like to express my sincere gratitude to Vinod, my supervisor and the entire Developers Team at CCS for their guidance and support throughout my work term. Special thanks to the Manager of CCS Web & Development Solutions for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience. The collaborative environment and commitment to excellence at CCS have been instrumental in my professional development.
+                    I would like to express my sincere gratitude to the entire Developers Team at CCS for their guidance, assistance and support throughout my work term. Special thanks to Vinod, my supervisor, for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience. The collaborative environment and commitment to excellence at CCS have been instrumental in my professional development.
                   </p>
                 </div>
               </section>
