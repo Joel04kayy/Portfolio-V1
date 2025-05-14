@@ -36,7 +36,7 @@ export default function WorkTerm1() {
           <div className="bg-[#1e2538] rounded-lg p-8 shadow-lg">
             <div className="space-y-8">
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Introduction</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-[#1ca0f4]">Introduction</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
                     During my work term at the University of Guelph's Computing & Communications Services (CCS) department, I served as a Website Training & Support Specialist Co-op. This role provided me with valuable experience in web platform management, client support, and digital accessibility. Throughout my term, I worked closely with the developers team to balance technical responsibilities with user education, focusing on making complex web technologies accessible to non-technical users while ensuring compliance with accessibility standards. My position was instrumental in bridging the gap between technical systems and end-users, ensuring that university departments could effectively manage their digital presence.
@@ -45,7 +45,7 @@ export default function WorkTerm1() {
               </section>
 
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">About the Employer</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-[#1ca0f4]">About the Employer</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
                     The University of Guelph's Computing & Communications Services (CCS) serves as the central IT department, providing essential technology infrastructure and services to the university community. CCS operates under six core values: Service Culture, Integrity, Individual Leadership, Teamwork, Agility, and Communication. The Web & Development Solutions team, where I was placed, specializes in delivering and maintaining websites using Drupal, Content Hub, and SharePoint platforms. The team provides comprehensive services including hosting, support, training, and security maintenance, ensuring all campus websites maintain a standardized, U of G branded, responsive, and AODA-compliant presence. This commitment to excellence in digital services helps maintain the university's reputation as a leading educational institution.
@@ -54,7 +54,7 @@ export default function WorkTerm1() {
               </section>
 
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Job Description</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-[#1ca0f4]">Job Description</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
                     As a Website Training & Support Specialist Co-op, my primary responsibilities included:
@@ -76,7 +76,7 @@ export default function WorkTerm1() {
               </section>
 
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Goals</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-[#1ca0f4]">Goals</h3>
                 <div className="prose prose-invert max-w-none">
                   <h4 className="text-xl font-semibold mb-2">Learning Goals</h4>
                   <ul className="list-disc pl-6 text-gray-300 space-y-2">
@@ -104,7 +104,7 @@ export default function WorkTerm1() {
               </section>
 
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Learning Goals Achievement</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-[#1ca0f4]">Learning Goals Achievement</h3>
                 <div className="prose prose-invert max-w-none">
                   <h4 className="text-xl font-semibold mb-2">Oral Communication – Leading Client Training Sessions</h4>
                   <p className="text-gray-300 mb-4">
@@ -121,6 +121,11 @@ export default function WorkTerm1() {
                     I strengthened my time management skills by efficiently handling multiple client requests across Drupal, SharePoint, and Content Hub platforms. Through effective prioritization and organization, I maintained consistent progress on all projects while meeting deadlines. The positive feedback received from both clients and team members validated my improved ability to manage multiple responsibilities effectively.
                   </p>
 
+                  <h4 className="text-xl font-semibold mb-2">Client Communication – Managing Expectations</h4>
+                  <p className="text-gray-300 mb-4">
+                    I developed strong interpersonal communication skills in managing client expectations and handling complex website changes. Through effective communication and collaboration with clients, I ensured their satisfaction with the services provided and addressed any concerns promptly.
+                  </p>
+
                   <h4 className="text-xl font-semibold mb-2">Drupal to Content Hub Migration Process</h4>
                   <p className="text-gray-300 mb-4">
                     I developed comprehensive expertise in the Content Hub migration process, successfully guiding multiple departments through their transitions from Drupal. By implementing best practices and maintaining strict attention to data integrity and accessibility standards, I ensured smooth migrations. The successful completion of multiple full-site migrations, along with positive client feedback, demonstrated my mastery of this complex process.
@@ -129,7 +134,7 @@ export default function WorkTerm1() {
               </section>
 
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Conclusions</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-[#1ca0f4]">Conclusions</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
                     This work term significantly enhanced my technical and professional skills. I developed expertise in web accessibility, content management systems, and technical communication. The experience taught me the importance of balancing technical knowledge with user-friendly communication, especially when working with non-technical clients. I learned to manage multiple priorities effectively while maintaining high-quality service standards. The exposure to Agile methodologies and team collaboration has prepared me well for future roles in technology and client support. This experience has reinforced my interest in web development and accessibility, and I look forward to applying these skills in future opportunities. The role provided valuable insights into the intersection of technology and user experience, emphasizing the importance of making complex systems accessible and user-friendly.
@@ -138,7 +143,7 @@ export default function WorkTerm1() {
               </section>
 
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-[#1ca0f4]">Acknowledgements</h3>
+                <h3 className="text-3xl font-semibold mb-4 text-[#1ca0f4]">Acknowledgements</h3>
                 <div className="prose prose-invert max-w-none">
                   <p className="text-gray-300">
                     I would like to express my sincere gratitude to the entire Developers Team at CCS for their guidance, assistance and support throughout my work term. Special thanks to Vinod, my supervisor, for providing valuable mentorship and opportunities for growth. I also appreciate the support from my co-op coordinator and the University of Guelph's Co-op Office for facilitating this valuable learning experience. The collaborative environment and commitment to excellence at CCS have been instrumental in my professional development.
