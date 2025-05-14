@@ -401,6 +401,12 @@ const Timeline = () => {
           transition: all 0.3s;
         }
 
+        .work-term-button:hover {
+          box-shadow: rgba(28, 160, 244, 0.4) 0 15px 30px -5px,
+                      rgba(28, 160, 244, 0.3) 0 0 20px;
+          transform: translateY(-2px);
+        }
+
         .work-term-button span {
           background-color: #1e2538;
           padding: 8px 24px;
