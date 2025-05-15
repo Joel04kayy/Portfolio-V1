@@ -484,7 +484,7 @@ const Timeline = () => {
               <span className={`timeline-${item.side}-arrow`}></span>
             </div>
             {index === 0 && (
-              <div className="timeline-circle-image">
+              <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/UOGlogo.jpeg" 
                   alt="University of Guelph Logo"
@@ -494,7 +494,7 @@ const Timeline = () => {
               </div>
             )}
             {index === 1 && (
-              <div className="timeline-circle-image">
+              <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/MTClogo.png" 
                   alt="More Than Circumstance Logo"
@@ -504,7 +504,7 @@ const Timeline = () => {
               </div>
             )}
             {index === 2 && (
-              <div className="timeline-circle-image">
+              <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/Elogo.png" 
                   alt="Evstry Logo"
@@ -514,7 +514,7 @@ const Timeline = () => {
               </div>
             )}
             {index === 3 && (
-              <div className="timeline-circle-image">
+              <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/SMlogo.png" 
                   alt="Spice Mart Logo"
