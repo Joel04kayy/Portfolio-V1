@@ -15,7 +15,7 @@ export default function WorkTerm1() {
           {/* Collapsible Introduction Section */}
           <div className="bg-[#1e2538] rounded-lg p-8 shadow-lg mb-8">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-32 h-32 relative rounded-full overflow-hidden border-4 border-[#1ca0f4]">
+              <div className="w-32 h-32 relative rounded-full overflow-hidden border-4 border-[#1ca0f4] hover:border-[#1ca0f4] hover:shadow-[0_0_15px_#1ca0f4] transition-all duration-300">
                 <Image
                   src="/UOGlogo.jpeg"
                   alt="University of Guelph Logo"
