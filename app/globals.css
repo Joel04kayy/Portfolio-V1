@@ -164,7 +164,7 @@ body {
 
 .social-button img {
   transition: 0.3s;
-  filter: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(0%) hue-rotate(314deg) brightness(95%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(7%) sepia(13%) saturate(7486%) hue-rotate(192deg) brightness(98%) contrast(104%);
 }
 
 .social-button:hover img {
