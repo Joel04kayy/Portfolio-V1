@@ -3,6 +3,7 @@
 import GradientBackground from './components/GradientBackground'
 import Navbar from './components/Navbar'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import Image from 'next/image'
 
 export default function Home() {
   const [text] = useTypewriter({
@@ -55,9 +56,13 @@ export default function Home() {
             </svg>
           </a>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="social-button resume">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
-            </svg>
+            <Image
+              src="/resumeIcon.png"
+              alt="Resume"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
           </a>
         </div>
       </div>
