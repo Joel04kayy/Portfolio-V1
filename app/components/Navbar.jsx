@@ -50,6 +50,18 @@ export default function Navbar() {
             >
               Experience
             </Link>
+            <a 
+              href="#" 
+              className="nav-link px-3 py-2 text-xl font-medium text-gray-300"
+            >
+              Snoozy Flickz
+            </a>
+            <a 
+              href="#" 
+              className="nav-link px-3 py-2 text-xl font-medium text-gray-300"
+            >
+              Next Build
+            </a>
             <Link 
               href="/contact" 
               className={`nav-link px-3 py-2 text-xl font-medium ${
