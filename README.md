@@ -38,14 +38,12 @@ The application follows a modular architecture:
 - React PDF for document handling
 - GitHub API integration
 - Custom animations and transitions
-
 ## Development
 To run the project locally:
 ```bash
 npm install
 npm run dev
 ```
-
 The application will be available at `http://localhost:3000`
 
 ## Deployment
