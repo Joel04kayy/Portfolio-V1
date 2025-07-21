@@ -52,7 +52,3 @@ The application will be available at `http://localhost:3000`
 The project is configured for easy deployment on Vercel, with automatic builds and deployments from the main branch.
 
 
-
-
-
-
