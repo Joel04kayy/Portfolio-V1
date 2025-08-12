@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Personal Portfolio Website
 
 This portfolio website is a modern, full-stack application built with Next.js and React, designed to showcase professional experience, skills, and projects. The application implements a component-based architecture that emphasizes reusability and maintainability, with a focus on creating an engaging user experience.
