@@ -54,15 +54,6 @@ export default function Navbar() {
               href="#" 
               className="nav-link px-3 py-2 text-xl font-medium text-gray-300 relative group"
             >
-              Snoozy Flickz
-              <span className="absolute top-full left-1/2 transform -translate-x-1/2 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap mt-3 bg-[#1ca0f4]">
-                Coming Soon
-              </span>
-            </a>
-            <a 
-              href="#" 
-              className="nav-link px-3 py-2 text-xl font-medium text-gray-300 relative group"
-            >
               Next Build
               <span className="absolute top-full left-1/2 transform -translate-x-1/2 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap mt-3 bg-[#1ca0f4]">
                 Coming Soon
