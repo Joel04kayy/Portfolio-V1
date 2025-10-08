@@ -51,13 +51,12 @@ export default function Navbar() {
               Experience
             </Link>
             <a 
-              href="#" 
-              className="nav-link px-3 py-2 text-xl font-medium text-gray-300 relative group"
+              href="https://next-build-pc.vercel.app/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link px-3 py-2 text-xl font-medium text-gray-300 hover:text-blue-400 transition-colors duration-200"
             >
               Next Build
-              <span className="absolute top-full left-1/2 transform -translate-x-1/2 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap mt-3 bg-[#1ca0f4]">
-                Coming Soon
-              </span>
             </a>
             <Link 
               href="/contact" 
