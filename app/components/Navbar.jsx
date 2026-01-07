@@ -51,12 +51,12 @@ export default function Navbar() {
               Experience
             </Link>
             <a 
-              href="https://next-build-pc.vercel.app/" 
+              href="https://www.nextbuildpcs.com/" 
               target="_blank"
               rel="noopener noreferrer"
               className="nav-link px-3 py-2 text-xl font-medium text-gray-300 hover:text-blue-400 transition-colors duration-200"
             >
-              Next Build
+              Next Build PCs
             </a>
             <Link 
               href="/contact" 
