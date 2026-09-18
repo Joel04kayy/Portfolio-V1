@@ -36,9 +36,9 @@ export default function Contact() {
         <h2 className="text-4xl font-bold text-center">Contact Me</h2>
       </div>
       
-      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 -mt-20">
+      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 -mt-8 sm:-mt-20">
         <div className="max-w-2xl w-full">
-          <div className="bg-[#1e2538]/80 backdrop-blur-sm rounded-lg p-8">
+          <div className="bg-[#1e2538]/80 backdrop-blur-sm rounded-lg p-5 sm:p-8">
             {/* Social Media Links */}
             <div className="flex justify-center space-x-6 mb-8">
               <a href="https://github.com/Joel04kayy" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white transition-colors">

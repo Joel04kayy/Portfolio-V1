@@ -12,14 +12,14 @@ export default function About() {
       
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 sm:text-4xl sm:mb-12">About Me</h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
             {/* Profile Section */}
             <div className="lg:col-span-1">
-              <div className="about-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 h-[62.5%] sticky top-32">
+              <div className="about-card bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 lg:h-[62.5%] lg:sticky lg:top-32">
                 <div className="flex flex-col items-center justify-center h-full">
-                  <div className="w-48 h-48 relative mb-6 rounded-full overflow-hidden border-4 border-blue-500/30 transition-all duration-300 hover:border-blue-400 hover:shadow-[0_0_20px_rgba(28,160,244,0.5)]">
+                  <div className="relative mb-6 h-36 w-36 overflow-hidden rounded-full border-4 border-blue-500/30 transition-all duration-300 hover:border-blue-400 hover:shadow-[0_0_20px_rgba(28,160,244,0.5)] sm:h-48 sm:w-48">
                     <Image
                       src="/Profile.png"
                       alt="Profile Picture"

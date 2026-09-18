@@ -63,14 +63,14 @@ export default function Projects() {
       <Navbar />
       
       <div className="pt-32 px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="text-4xl font-bold text-center mb-24">Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 sm:text-4xl sm:mb-24">Projects</h2>
         
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-lg p-8">
+          <div className="rounded-lg p-2 sm:p-8">
             {loading ? (
               <div className="text-center text-gray-300">Loading projects...</div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
                 {repos.map((repo) => (
                   <ProjectTile key={repo.name} repo={repo} />
                 ))}

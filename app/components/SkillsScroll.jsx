@@ -45,18 +45,18 @@ export default function SkillsScroll() {
 
   return (
     <div className="w-full py-8">
-      <h3 className="text-4xl font-bold text-center mb-12">Skills</h3>
-      <div className="space-y-8">
+      <h3 className="text-3xl font-bold text-center mb-8 sm:text-4xl sm:mb-12">Skills</h3>
+      <div className="space-y-6 sm:space-y-8">
         {/* First Row */}
         <div className="relative overflow-hidden">
-          <div className="animate-scroll-left flex gap-4 whitespace-nowrap">
+          <div className="animate-scroll-left flex gap-2 whitespace-nowrap sm:gap-4">
             {extendedFirstHalf.map((skill, index) => (
               <div
                 key={`${skill.name}-${index}-first`}
-                className="inline-flex flex-col items-center rounded-lg p-4 min-w-[120px]"
+                className="inline-flex min-w-[90px] flex-col items-center rounded-lg p-3 sm:min-w-[120px] sm:p-4"
               >
-                <span className="text-blue-400 text-sm mb-1">{skill.category}</span>
-                <span className="text-white">{skill.name}</span>
+                <span className="mb-1 text-[10px] text-blue-400 sm:text-sm">{skill.category}</span>
+                <span className="text-xs text-white sm:text-base">{skill.name}</span>
               </div>
             ))}
           </div>
@@ -64,14 +64,14 @@ export default function SkillsScroll() {
 
         {/* Second Row */}
         <div className="relative overflow-hidden">
-          <div className="animate-scroll-right flex gap-4 whitespace-nowrap">
+          <div className="animate-scroll-right flex gap-2 whitespace-nowrap sm:gap-4">
             {extendedSecondHalf.map((skill, index) => (
               <div
                 key={`${skill.name}-${index}-second`}
-                className="inline-flex flex-col items-center rounded-lg p-4 min-w-[120px]"
+                className="inline-flex min-w-[90px] flex-col items-center rounded-lg p-3 sm:min-w-[120px] sm:p-4"
               >
-                <span className="text-blue-400 text-sm mb-1">{skill.category}</span>
-                <span className="text-white">{skill.name}</span>
+                <span className="mb-1 text-[10px] text-blue-400 sm:text-sm">{skill.category}</span>
+                <span className="text-xs text-white sm:text-base">{skill.name}</span>
               </div>
             ))}
           </div>
