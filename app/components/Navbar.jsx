@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
@@ -9,14 +9,20 @@ export default function Navbar() {
   const pathname = usePathname()
   const navRef = useRef(null)
   const [selectedHref, setSelectedHref] = useState(pathname)
-  const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0 })
+  const [hoverStyle, setHoverStyle] = useState({ left: 0, top: 0, width: 0, height: 0, opacity: 0 })
+  const [bubbleReady, setBubbleReady] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setSelectedHref(pathname)
 
-    const selectedItem = navRef.current?.querySelector('[data-selected="true"]')
+    const selectedItem = Array.from(navRef.current?.querySelectorAll('[data-nav-item]') || [])
+      .find((item) => item.getAttribute('href') === pathname)
     if (selectedItem) {
+      setBubbleReady(false)
       syncBubbleToElement(selectedItem)
+      const transitionFrame = requestAnimationFrame(() => setBubbleReady(true))
+
+      return () => cancelAnimationFrame(transitionFrame)
     }
   }, [pathname])
 
@@ -25,10 +31,18 @@ export default function Navbar() {
 
     const navRect = navRef.current.getBoundingClientRect()
     const elementRect = element.getBoundingClientRect()
+    const navItems = Array.from(navRef.current.querySelectorAll('[data-nav-item]'))
+    const itemIndex = navItems.indexOf(element)
+    const isFirstItem = itemIndex === 0
+    const isLastItem = itemIndex === navItems.length - 1
+    const left = isFirstItem ? 0 : elementRect.left - navRect.left
+    const right = isLastItem ? navRect.width : elementRect.right - navRect.left
 
     setHoverStyle({
-      left: elementRect.left - navRect.left,
-      width: elementRect.width,
+      left,
+      top: 0,
+      width: right - left,
+      height: navRect.height,
       opacity: 1,
     })
   }
@@ -63,31 +77,51 @@ export default function Navbar() {
       return
     }
 
-    const hoveredRect = hoveredItem.getBoundingClientRect()
-    setHoverStyle({
-      left: hoveredRect.left - navRect.left,
-      width: hoveredRect.width,
+    syncBubbleToElement(hoveredItem)
+  }
+
+  const minimizeBubbleToCenter = () => {
+    setHoverStyle((prev) => ({
+      ...prev,
+      left: prev.left + prev.width / 2,
+      top: prev.top + prev.height / 2,
+      width: 0,
+      height: 0,
       opacity: 1,
-    })
+    }))
+  }
+
+  const restoreSelectedBubble = () => {
+    const selectedItem = navRef.current?.querySelector('[data-selected="true"]')
+
+    if (selectedItem) {
+      syncBubbleToElement(selectedItem)
+    } else {
+      setHoverStyle((prev) => ({ ...prev, opacity: 0 }))
+    }
   }
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4 lg:px-6">
-      <div className="relative mx-auto max-w-5xl rounded-full border border-white/15 bg-white/8 px-3 py-2 shadow-[0_8px_25px_rgba(9,25,40,0.18)] backdrop-blur-2xl sm:px-5 sm:py-3">
+      <div className="nav-shell relative mx-auto max-w-5xl rounded-full border border-white/15 bg-white/8 px-3 py-2 shadow-[0_8px_25px_rgba(9,25,40,0.18)] backdrop-blur-2xl sm:px-5 sm:py-3">
         <div className="relative flex items-center justify-between gap-3">
           <Link
             href="/"
             className={`nav-home shrink-0 ${
               pathname === '/' ? 'text-blue-300' : 'text-gray-200'
             }`}
-            onClick={(event) => {
+            onMouseEnter={minimizeBubbleToCenter}
+            onMouseLeave={restoreSelectedBubble}
+            onClick={() => {
               setSelectedHref('/')
-              requestAnimationFrame(() => {
-                const target = event.currentTarget
-                if (navRef.current && target) {
-                  syncBubbleToElement(target)
-                }
-              })
+              setHoverStyle((prev) => ({
+                ...prev,
+                left: prev.left + prev.width / 2,
+                top: prev.top + prev.height / 2,
+                width: 0,
+                height: 0,
+                opacity: 0,
+              }))
             }}
           >
             <Image
@@ -114,13 +148,19 @@ export default function Navbar() {
                 setHoverStyle((prev) => ({ ...prev, opacity: 0 }))
               }
             }}
-            className="relative flex items-center justify-end gap-1.5 rounded-full border border-white/10 bg-slate-950/20 p-1.5 sm:gap-2 md:gap-2.5"
+            className="nav-menu relative flex items-center justify-end gap-1.5 rounded-full border border-white/10 bg-slate-950/20 p-1.5 sm:gap-2 md:gap-2.5"
           >
             <div
-              className="pointer-events-none absolute inset-y-1.5 rounded-full bg-[linear-gradient(135deg,rgba(255,255,255,0.24),rgba(255,255,255,0.12),rgba(148,163,184,0.18))] shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),0_0_18px_rgba(255,255,255,0.2)] backdrop-blur-md transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
+              className={`pointer-events-none absolute rounded-full bg-[linear-gradient(135deg,rgba(255,255,255,0.24),rgba(255,255,255,0.12),rgba(148,163,184,0.18))] shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),0_0_18px_rgba(255,255,255,0.2)] backdrop-blur-md ${
+                bubbleReady
+                  ? 'transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]'
+                  : 'transition-none'
+              }`}
               style={{
                 left: hoverStyle.left,
+                top: hoverStyle.top,
                 width: hoverStyle.width,
+                height: hoverStyle.height,
                 opacity: hoverStyle.opacity,
               }}
             />
@@ -150,14 +190,8 @@ export default function Navbar() {
                   data-active={isActive}
                   data-nav-item="true"
                   data-selected={isActive}
-                  onClick={(event) => {
+                  onClick={() => {
                     setSelectedHref(item.href)
-                    requestAnimationFrame(() => {
-                      const target = event.currentTarget
-                      if (navRef.current && target) {
-                        syncBubbleToElement(target)
-                      }
-                    })
                   }}
                   className={`nav-link relative z-10 inline-flex items-center justify-center rounded-full px-2 py-1.5 text-[10px] font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] sm:px-3 sm:text-[11px] md:px-4 md:text-[0.95rem] lg:text-[1rem] ${
                     isActive ? 'text-white' : 'text-gray-200 hover:text-white'

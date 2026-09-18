@@ -2,6 +2,7 @@
 
 import GradientBackground from './components/GradientBackground'
 import Navbar from './components/Navbar'
+import ThemeToggle from './components/ThemeToggle'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import Image from 'next/image'
 
@@ -60,6 +61,7 @@ export default function Home() {
               className="h-6 w-6"
             />
           </a>
+          <ThemeToggle />
         </div>
       </div>
     </main>

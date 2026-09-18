@@ -38,7 +38,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            try {
+              document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') || 'dark';
+            } catch (error) {
+              document.documentElement.dataset.theme = 'dark';
+            }
+          `,
+        }}
+      />
       <body className={`${comfortaa.className} flex flex-col min-h-screen`}>
         {children}
       </body>
