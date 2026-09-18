@@ -1,7 +1,6 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import AnimatedBackground from '../components/AnimatedBackground'
 import Navbar from '../components/Navbar'
 
 export default function Contact() {
@@ -29,7 +28,6 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen text-white relative flex flex-col">
-      <AnimatedBackground />
       <Navbar />
       
       <div className="pt-32 px-4 sm:px-6 lg:px-8 relative z-10">

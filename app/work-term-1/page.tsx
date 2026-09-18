@@ -1,11 +1,9 @@
-import AnimatedBackground from '../components/AnimatedBackground'
 import Navbar from '../components/Navbar'
 import Image from 'next/image'
 
 export default function WorkTerm1() {
   return (
     <main className="min-h-screen text-white relative">
-      <AnimatedBackground />
       <Navbar />
       
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">

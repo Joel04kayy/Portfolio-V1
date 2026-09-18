@@ -1,6 +1,5 @@
 'use client';
 
-import GradientBackground from './components/GradientBackground'
 import Navbar from './components/Navbar'
 import ThemeToggle from './components/ThemeToggle'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
@@ -16,7 +15,6 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden text-white">
-      <GradientBackground />
       <Navbar />
 
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-28 pt-28 sm:px-6 lg:px-8">

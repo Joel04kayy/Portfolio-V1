@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import AnimatedBackground from '../components/AnimatedBackground'
 import Navbar from '../components/Navbar'
 import ProjectTile from '../components/ProjectTile'
 import SkillsScroll from '../components/SkillsScroll'
@@ -59,7 +58,6 @@ export default function Projects() {
 
   return (
     <main className="min-h-screen text-white relative">
-      <AnimatedBackground />
       <Navbar />
       
       <div className="pt-32 px-4 sm:px-6 lg:px-8 relative z-10">

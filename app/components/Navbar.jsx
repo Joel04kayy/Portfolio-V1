@@ -1,16 +1,23 @@
 'use client';
 
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 export default function Navbar() {
   const pathname = usePathname()
+  const router = useRouter()
   const navRef = useRef(null)
   const [selectedHref, setSelectedHref] = useState(pathname)
   const [hoverStyle, setHoverStyle] = useState({ left: 0, top: 0, width: 0, height: 0, opacity: 0 })
   const [bubbleReady, setBubbleReady] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useLayoutEffect(() => {
     setSelectedHref(pathname)
@@ -24,7 +31,9 @@ export default function Navbar() {
 
       return () => cancelAnimationFrame(transitionFrame)
     }
-  }, [pathname])
+
+    setBubbleReady(true)
+  }, [pathname, mounted])
 
   const syncBubbleToElement = (element) => {
     if (!navRef.current || !element) return
@@ -101,7 +110,21 @@ export default function Navbar() {
     }
   }
 
-  return (
+  const navigateWithSwipe = (event, href, direction) => {
+    event.preventDefault()
+    window.sessionStorage.setItem('page-transition-direction', direction)
+    document.documentElement.dataset.pageTransitionDirection = direction
+    setSelectedHref(href)
+
+    if (document.startViewTransition) {
+      document.documentElement.dataset.viewTransition = 'true'
+      document.startViewTransition(() => router.push(href))
+    } else {
+      router.push(href)
+    }
+  }
+
+  const navbar = (
     <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4 lg:px-6">
       <div className="nav-shell relative mx-auto max-w-5xl rounded-full border border-white/15 bg-white/8 px-3 py-2 shadow-[0_8px_25px_rgba(9,25,40,0.18)] backdrop-blur-2xl sm:px-5 sm:py-3">
         <div className="relative flex items-center justify-between gap-3">
@@ -112,8 +135,8 @@ export default function Navbar() {
             }`}
             onMouseEnter={minimizeBubbleToCenter}
             onMouseLeave={restoreSelectedBubble}
-            onClick={() => {
-              setSelectedHref('/')
+            onClick={(event) => {
+              navigateWithSwipe(event, '/', 'left')
               setHoverStyle((prev) => ({
                 ...prev,
                 left: prev.left + prev.width / 2,
@@ -151,7 +174,7 @@ export default function Navbar() {
             className="nav-menu relative flex items-center justify-end gap-1.5 rounded-full border border-white/10 bg-slate-950/20 p-1.5 sm:gap-2 md:gap-2.5"
           >
             <div
-              className={`pointer-events-none absolute rounded-full bg-[linear-gradient(135deg,rgba(255,255,255,0.24),rgba(255,255,255,0.12),rgba(148,163,184,0.18))] shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),0_0_18px_rgba(255,255,255,0.2)] backdrop-blur-md ${
+              className={`nav-bubble pointer-events-none absolute rounded-full backdrop-blur-md ${
                 bubbleReady
                   ? 'transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]'
                   : 'transition-none'
@@ -190,8 +213,12 @@ export default function Navbar() {
                   data-active={isActive}
                   data-nav-item="true"
                   data-selected={isActive}
-                  onClick={() => {
-                    setSelectedHref(item.href)
+                  onClick={(event) => {
+                    const currentIndex = navItems.findIndex((navItem) => navItem.href === pathname)
+                    const targetIndex = navItems.findIndex((navItem) => navItem.href === item.href)
+                    const direction = targetIndex < currentIndex ? 'left' : 'right'
+
+                    navigateWithSwipe(event, item.href, direction)
                   }}
                   className={`nav-link relative z-10 inline-flex items-center justify-center rounded-full px-2 py-1.5 text-[10px] font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] sm:px-3 sm:text-[11px] md:px-4 md:text-[0.95rem] lg:text-[1rem] ${
                     isActive ? 'text-white' : 'text-gray-200 hover:text-white'
@@ -206,4 +233,6 @@ export default function Navbar() {
       </div>
     </nav>
   )
+
+  return mounted ? createPortal(navbar, document.body) : null
 } 

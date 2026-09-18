@@ -1,10 +1,8 @@
-import AnimatedBackground from '../components/AnimatedBackground'
 import Navbar from '../components/Navbar'
 
 export default function Skills() {
   return (
     <main className="min-h-screen text-white relative">
-      <AnimatedBackground />
       <Navbar />
       
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">

@@ -1,5 +1,6 @@
 import { Comfortaa } from "next/font/google";
 import "./globals.css";
+import GradientBackground from './components/GradientBackground';
 
 const comfortaa = Comfortaa({ 
   weight: ['300', '400', '500', '600', '700'],
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         }}
       />
       <body className={`${comfortaa.className} flex flex-col min-h-screen`}>
+        <GradientBackground />
         {children}
       </body>
     </html>
