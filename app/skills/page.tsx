@@ -5,7 +5,7 @@ export default function Skills() {
     <main className="min-h-screen text-white relative">
       <Navbar />
       
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="pt-36 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

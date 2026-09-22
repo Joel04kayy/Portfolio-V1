@@ -60,8 +60,8 @@ export default function Projects() {
     <main className="min-h-screen text-white relative">
       <Navbar />
       
-      <div className="pt-32 px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-12 sm:text-4xl sm:mb-24">Projects</h2>
+      <div className="pt-36 px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="text-3xl font-bold text-center mb-6 sm:text-4xl sm:mb-8">Projects</h2>
         
         <div className="max-w-6xl mx-auto">
           <div className="rounded-lg p-2 sm:p-8">

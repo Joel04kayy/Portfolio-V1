@@ -7,7 +7,7 @@ export default function Resume() {
     <main className="min-h-screen text-white relative">
       <Navbar />
       
-      <div className="pt-32 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="pt-36 px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-4xl font-bold text-center mb-24">Resume</h2>
         
         <div className="max-w-4xl mx-auto">
