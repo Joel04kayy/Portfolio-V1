@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" role="img" aria-labelledby="title desc">
+  <title id="title">Hammond Power Solutions</title>
+  <desc id="desc">HPS logo</desc>
+  <g fill="#0b2348">
+    <path d="M35 62h30v55h74V62h30v136h-30v-55H65v55H35z"/>
+    <path d="M190 62h74c34 0 53 18 53 45s-19 45-53 45h-44v46h-30zm68 64c19 0 29-7 29-19s-10-19-29-19h-38v38z"/>
+    <path d="M334 62h113v26h-83v30h75v25h-75v67h-30z"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-width="9">
+    <path stroke="#1a365d" d="M475 70l87-37M475 88l99-27M475 106l105-14M475 124l101 0M475 142l94 17M475 160l82 34"/>
+    <path stroke="#39b9e8" d="M518 58l55-25M515 78l69-20M512 98l72-11M509 118l70 2M506 138l65 16M503 158l53 25"/>
+  </g>
+</svg>

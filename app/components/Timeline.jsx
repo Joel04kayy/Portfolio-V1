@@ -16,12 +16,20 @@ const Timeline = () => {
 
   const timelineData = [
     {
+      company: "Hammond Power Solutions",
+      position: "Business Systems IT Co-op",
+      period: "May 2026 - Aug 2026",
+      description: "At Hammond Power Solutions, I worked as a Business Systems IT Co-op on enterprise automation initiatives involving Dynamics 365 Finance & Operations, Power Automate, Copilot Studio, and applied AI. I designed and refined an AI sales order creation agent that extracts information from customer purchase orders and creates sales orders in D365, built OCR and structured data extraction workflows, and mapped D365 entities for customer and location lookup. I also prototyped Power Automate Desktop solutions for intelligent process automation and collaborated with the Business Systems Team to troubleshoot integrations, document processes, and translate technical solutions into practical business workflows.",
+      skills: "Dynamics 365 Finance & Operations · Power Automate · Power Automate Desktop · Copilot Studio · AI Builder OCR · Dataverse · OData · API Integration · Prompt Engineering · Process Automation · Technical Documentation",
+      side: "left"
+    },
+    {
       company: "University of Guelph",
       position: "Website Training & Support Specialist · Co-op",
       period: "Jan 2025 - Aug 2025",
       description: "At the University of Guelph, I acted as a Website Training & Support Specialist Co-op, delivering expert training and technical support for Drupal, Content Hub, and SharePoint to enhance client proficiency and platform efficiency. I developed comprehensive documentation, release notes, and training materials, ensuring clarity and accessibility for users. Additionally, I performed accessibility audits, collaborated with developers to resolve issues, and efficiently managed client design and customization requests within Agile Scrum frameworks—streamlining workflows and improving system usability.",
       skills: "Drupal · SharePoint · Content Hub · Technical Documentation · Training & Development · Accessibility Testing · Technical Support · Agile Scrum · Content Management Systems (CMS) · Project Management · User Experience (UX)",
-      side: "left"
+      side: "right"
     },
     {
       company: "More Than Circumstance",
@@ -29,7 +37,7 @@ const Timeline = () => {
       period: "May 2024 - Sep 2024",
       description: "At More Than Circumstance, I supported the nonprofit's mission by leading a full website redesign to enhance user experience and engagement. Using Figma, I translated the manager's vision into wireframes and prototypes before bringing the design to life with Webflow and React. While guiding a team to execute tasks efficiently, I improved critical features including donations, e-commerce, blogs, and event updates, strengthening the platform's functionality. Through this process, I deepened my expertise in content management, site mapping, and accessibility compliance, ensuring the final product met AODA standards for an inclusive user experience.",
       skills: "Search Engine Optimization (SEO) · Front-End Development · Web Development · Webflow · Project Management · Cascading Style Sheets (CSS) · Content Management Systems (CMS) · React.js · Figma (Software) · Responsive Web Design",
-      side: "right"
+      side: "left"
     },
     {
       company: "Evstry",
@@ -37,7 +45,7 @@ const Timeline = () => {
       period: "Jan 2024 - Aug 2024",
       description: "At Evstry, I played a key role in revamping the cash gift registry platform by leading website redesign efforts using Figma, CMS, Webflow, and React in close collaboration with the manager. I managed a team of five, ensuring efficient and timely task completion, while also overseeing ad campaigns, including SEO and pixel placement for YouTube, TikTok, and Instagram ads. Additionally, I enhanced user engagement by creating and managing email newsletters and facilitated smooth project execution by conducting regular team meetings to gather requirements, demo progress, and collect feedback—significantly improving platform performance and laying the groundwork for future app development.",
       skills: "Search Engine Optimization (SEO) · Front-End Development · Web Development · Webflow · Project Management · Cascading Style Sheets (CSS) · HTML · Content Management Systems (CMS) · React.js · Figma (Software) · JavaScript · Responsive Web Design",
-      side: "left"
+      side: "right"
     },
     {
       company: "Spice Mart",
@@ -45,7 +53,7 @@ const Timeline = () => {
       period: "Jun 2023 - Aug 2023",
       description: "As a Freelance Full-stack Developer for Spice Mart, I helped elevate Barrie's premier South Indian store by building a dynamic, full-stack website using Tailwind CSS, Next.js, MongoDB, and React. Collaborating with a peer, I integrated a RESTful API to optimize data management and implemented secure CRUD operations via Auth0 for enhanced security. The project empowered the client with easy self-updates for products, pricing, and weekly flyers—streamlining their digital operations. Through hands-on development, client meetings, and iterative research, I refined my project management, teamwork, and full-stack problem-solving skills while delivering a responsive, user-friendly platform.",
       skills: "Search Engine Optimization (SEO) · Tailwind CSS · Front-End Development · HTML · Content Management Systems (CMS) · React.js · Responsive Web Design",
-      side: "right"
+      side: "left"
     }
   ];
 
@@ -66,6 +74,7 @@ const Timeline = () => {
           max-width: 1200px;
           margin: 100px auto;
           width: 100%;
+          padding-bottom: 140px;
         }
         
         .timeline-line {
@@ -90,8 +99,12 @@ const Timeline = () => {
           padding: 10px 80px;
           position: relative;
           width: 50%;
-          opacity: 0;
+          opacity: 1;
           transition: opacity 0.5s ease-out;
+        }
+
+        .timeline-container-item:last-child {
+          margin-bottom: 160px;
         }
         
         .timeline-text-box {
@@ -229,6 +242,12 @@ const Timeline = () => {
           max-width: 100%;
           max-height: 100%;
         }
+
+        /* Specific adjustments for Hammond Power Solutions logo */
+        .timeline-circle-image img[alt="Hammond Power Solutions Logo"] {
+          max-width: 115%;
+          max-height: 115%;
+        }
         
         .timeline-right-container::after {
           left: -40px;
@@ -273,6 +292,11 @@ const Timeline = () => {
         .timeline-container-item:nth-child(4)::after {
           animation: timeline-pulse 4s infinite;
           animation-delay: 3s;
+        }
+
+        .timeline-container-item:nth-child(5)::after {
+          animation: timeline-pulse 4s infinite;
+          animation-delay: 0.5s;
         }
         
         .timeline-description-container {
@@ -374,6 +398,7 @@ const Timeline = () => {
           .timeline-main {
             margin: 12px auto 0;
             max-width: 100%;
+            padding-bottom: 100px;
           }
 
           .timeline-line {
@@ -386,6 +411,10 @@ const Timeline = () => {
             padding: 0 0 20px 58px;
             left: 0;
             opacity: 1;
+          }
+
+          .timeline-container-item:last-child {
+            margin-bottom: 120px;
           }
 
           .timeline-text-box {
@@ -581,6 +610,16 @@ const Timeline = () => {
             </div>
             {index === 0 && (
               <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/HPSlogo.jpeg"
+                  alt="Hammond Power Solutions Logo"
+                  width={100}
+                  height={100}
+                />
+              </div>
+            )}
+            {index === 1 && (
+              <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/UOGlogo.jpeg" 
                   alt="University of Guelph Logo"
@@ -589,7 +628,7 @@ const Timeline = () => {
                 />
               </div>
             )}
-            {index === 1 && (
+            {index === 2 && (
               <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/MTClogo.png" 
@@ -599,7 +638,7 @@ const Timeline = () => {
                 />
               </div>
             )}
-            {index === 2 && (
+            {index === 3 && (
               <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/Elogo.png" 
@@ -609,7 +648,7 @@ const Timeline = () => {
                 />
               </div>
             )}
-            {index === 3 && (
+            {index === 4 && (
               <div className="timeline-circle-image hover:scale-110 transition-transform duration-300">
                 <Image 
                   src="/SMlogo.png" 
@@ -635,12 +674,12 @@ const Timeline = () => {
             <span className="hover-text">View Report</span>
           </span>
         </a>
-        <div className="work-term-button">
+        <a href="/work-term-3" className="work-term-button">
           <span>
             <span className="default-text">Work Term 3 Report</span>
-            <span className="hover-text">Not available yet</span>
+            <span className="hover-text">View Report</span>
           </span>
-        </div>
+        </a>
         <div className="work-term-button">
           <span>
             <span className="default-text">Work Term 4 Report</span>
